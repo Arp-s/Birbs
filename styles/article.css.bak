@@ -1,0 +1,89 @@
+.summary{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: calc(100% - 20px);
+    width: calc((100% - var(--page_width))/2 - 30px);
+    max-width: 250px;
+    background: url(../assets/global/background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+    .summary-title{
+        font: var(--title1-police-size) var(--title-police);
+        margin-bottom: 10px;
+        text-align: center;
+        color: var(--text-color);
+    }
+    .summary-list{
+        margin-top: 10px;
+        list-style-type: none;
+        text-align: left;
+    }
+        li{
+            padding: 6px 0px;
+        }
+        auteur{
+            padding: 6px 0px;
+        }
+    .summary-link{
+        font-size: var(--p-police-size);
+        text-decoration: none;
+        color: var(--text-color);
+    }
+    .summary-link:hover{
+        color: var(--main-color);
+    }
+
+.page.content .head {
+    width: 95%;
+    margin: 0 auto 0 auto;
+}
+    .page.content .head-middle {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+        .page.content .logo {
+            height: 100px;
+        }
+
+        .page.content .newspaper-title {
+            font: var(--title-police-size) var(--title-police);
+            color: var(--main-color);
+            text-align: center;
+            margin: auto;
+        }
+
+.subsection {
+    height: auto;
+    width: 100%;
+    margin: 10px auto 10px auto;
+    padding: 10px;
+    background: var(--background-color-o1);
+}
+.subsection.top {
+    margin-top: 0;
+}
+    .subsection-title {
+        font: var(--title2-police-size) var(--title-police);
+        color: var(--main-color);
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .subsection-text {
+        font: var(--p-police-size) var(--p-police);
+        letter-spacing: 0px;
+        color: var(--text-color);
+        font-weight: 400;
+        text-align: justify;
+        overflow-wrap: break-word;
+    }
+    .subsection-link {
+        overflow-wrap: break-word;
+    }
+
+.source {
+    font-size: var(--source-police-size);
+}

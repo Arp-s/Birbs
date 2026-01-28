@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Yeseva+One&display=swap');
+
+:root{
+    --main-color:  rgb(60, 95, 60);
+    --second-color: rgb(255, 255, 255);
+    --third-color: rgb(55, 70, 55);
+
+    --text-color: rgb(0, 0, 0);
+    --background-color : rgb(100, 110, 95);
+    --background-color-o1 : rgba(100, 110, 95, 0.1);
+    --background-color-o2 : rgba(100, 110, 95, 0.2);
+
+    --title-police: "Yeseva One", arial;
+    --p-police: "Alice", arial;
+
+    --p-police-size: 16px;
+    --source-police-size: 12px;
+    --title-police-size: 56px;
+    --subtitle-police-size: 48px;
+    --title1-police-size: 36px;
+    --title2-police-size: 28px;
+    --title3-police-size: 22px;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scrollbar-color: var(--third-color) rgba(0, 0, 0, 0);
+}
+*::selection {
+    background:var(--third-color);
+    color:var(--second-color);
+    border-color: var(--main-color);
+}
+*::-moz-selection {
+    background:var(--third-color);
+    color:var(--second-color);
+}
+*::-webkit-selection {
+    background:var(--third-color);
+    color:var(--second-color);
+}
+input::-moz-selection {
+    background: var(--background-color-o2);
+    border-color: var(--main-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+u {
+  text-decoration: underline;
+}
+
+body {
+    background-color: var(--background-color);
+}
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+    button {
+        padding: 2px 5px;
+        box-sizing: border-box;
+        border: 1px solid var(--main-color);
+        border-radius: 0;
+        background-color: var(--background-color-o1);
+    }
+    button:hover {
+        background-color: var(--background-color-o2);
+    }
+
+    /* Inputs */
+    input {
+        padding-left: 10px;
+        box-sizing: border-box;
+        border: 1px solid var(--main-color);
+        border-radius: 0;
+        background-color: var(--background-color-o1);
+    }
+    input:hover {
+        background-color: var(--background-color-o2);
+    }
+    input[type=text] {
+        height: 30px;
+    }
+
+    input[type=checkbox] {
+        height: 20px;
+        width: 20px;
+        border-radius: none;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        cursor: pointer;
+        font: 14px var(--title-police);
+    }
+    .checkbox .checkmark {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--main-color);
+        border-radius: 0px;
+        background-color: var(--background-color-o1);
+        transition: all 0.2s ease;
+    }
+    .checkbox input:checked + .checkmark {
+        background-color: var(--background-color-o2);
+    }
+    .checkbox .checkmark::after {
+        content: "";
+        display: none;
+        width: 6px;
+        height: 12px;
+        border: 1px solid var(--main-color);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        position: absolute;
+        margin-left: 5.6px;
+        margin-top: 0.9px;
+    }
+    .checkbox input:checked + .checkmark::after {
+        display: block;
+    }
+
+    input:focus {
+        outline: none;
+        background: var(--background-color-o2);
+    }
+    option {
+        border: 1px solid var(--main-color);
+        border-radius: 0;
+        background-color: var(--background-color-o1);
+    }
+    option:hover {
+        border-radius: 0;
+        background-color: var(--background-color-o1);
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+        padding: 0;
+    }
+
+    /* Select */
+    .custom-select {
+        position: relative;
+        display: inline-block;
+        width: 20%;
+    }
+        .select-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+            width: 100%;
+            padding: 0 10px;
+            border: 1px solid var(--main-color);
+            border-radius: 0;
+            background-color: var(--background-color-o1);
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .arrow {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid #000;
+            transition: transform ease-in-out 0.3s;
+        }
+        .select-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            margin: 10px 0 0;
+            padding: 10px;
+            border: 1px solid var(--main-color);
+            border-radius: 0;
+            background: url(../assets/global/background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-color: var(--background-color-o1);
+            list-style: none;
+            box-shadow: 0px 0px 10px rgba(55, 70, 55, 0.3);
+            overflow-y: auto;
+        }
+            .select-dropdown li {
+                padding-left: 10px;
+                cursor: pointer;
+                outline: none;
+                font-size: 14px;
+            }
+            .select-dropdown li.selected {
+                background-color: var(--backgound-color-o1);
+                border: 1px solid var(--main-color);
+            }
+            .select-dropdown li:hover {
+                background-color: rgba(55, 70, 55, 0.2);
+                border: 1px dashed var(--main-color);
+            }
+            .select-dropdown.hidden {
+                display: none;
+            }

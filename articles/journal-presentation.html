@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="../assets/global/lwj_logo.ico">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/article.css">
+
+    <!-- Web Integration -->
+    <meta property="og:site_name" content="Lyall's Wren Journal">
+    <meta name="twitter:site" content="Lyall's Wren Journal">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="science">
+
+    <title>Journal Presentation - LWJ</title>
+    <meta property="og:title" content="Journal Presentation">
+    <meta name="twitter:title" content="Journal Presentation">
+
+    <meta name="description" content="Presentation, concept and description of the journal, why this journal exist, parution rythme, who's gonna write it, who am I, intention declaration">
+    <meta property="og:description" content="Presentation, concept and description of the journal, why this journal exist, parution rythme, who's gonna write it, who am I, intention declaration">
+    <meta name="twitter:description" content="Presentation, concept and description of the journal, why this journal exist, parution rythme, who's gonna write it, who am I, intention declaration">
+
+    <meta property="lwj:tags" content="journal infos">
+    <meta name="keywords" content="biology, article, journal">
+    <meta property="article:tag" content="biology">
+    <meta property="article:tag" content="article">
+    <meta property="article:tag" content="journal">
+
+    <meta property="article:published_time" content="2025-11-19">
+    <meta property="og:updated_time" content="2025-11-19">
+
+    <meta name="author" content="C. Didon">
+    <meta property="article:author" content="C. Didon">
+    <meta name="twitter:creator" content="C. Didon">
+
+    <meta property="og:url" content="">
+
+    <meta property="og:image" content="">
+    <meta name="twitter:image" content="">
+    <meta property="og:image:alt" content="">
+    <meta name="twitter:image:alt" content="">
+
+    <meta name="theme-color" content="#646e5f" data-react-helmet="true" />
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script>const URL_PDF = 'journal-presentation.pdf';</script>
+    <script type="module" src="../scripts/pdf_viewer.js"></script>
+</head>
+<body>
+<div class="app">
+    <aside class="summary" aria-label="Table des matières">
+        <span class="status" id="status">Loading…</span>
+        <a href="../home.html"><img class="logo" src="../assets/global/lwj_logo.png" alt="Lyall's Wren bird photo"><h3 class="summary-title">LWJ</h3></a>
+        <h3 class="summary-title">Summary</h3>
+        <ul id="toc" class="summary-list"></ul>
+        <hr class="line">
+        <h3 class="summary-title">Thumbnails</h3>
+        <div id="thumbs" class="thumbs"></div>
+
+        <div class="controls ctrl-space">
+            <button id="prev">◀</button>
+            <span class="muted">Page</span>
+            <input id="page-num" type="number" min="1" value="1" />
+            <span class="muted">/</span>
+            <span id="page-count" class="muted">0</span>
+            <button id="next">▶</button>
+        </div>
+
+        <div class="controls ctrl-space">
+            <button id="zoom-out">-</button>
+            <span class="muted">Zoom</span>
+            <input id="zoom" type="number" value="1.4" step="0.1" min="0.3" max="4" />
+            <button id="zoom-in">+</button>
+            <button id="fit-width">Fit</button>
+        </div>
+        <div class="controls">
+            <button id="download">Download</button>
+        </div>        
+    </aside>
+
+  <main class="main">
+    <div class="viewer-wrap" id="viewer-wrap">
+      <div id="pages" class="pages" aria-live="polite">
+        <!-- pdf injected here -->
+      </div>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
