@@ -22,9 +22,9 @@ Any error will be corrected.
 Some sources might not be freely accessible and are accesible to me via my Unniversity. We don't think that's a problem cause using them make them accessible to anyone, and they still can be verified.
 
 ## Errors founded
-If you fin and error, please make a report at lwj@gmail.com.
+If you fin and error, please make a report at lwj.journal@gmail.com.
 **Format** :
-To : lwj@gmail.com
+To : lwj.journal@gmail.com
 Object : Error in [article title] : [error type]
 Content : 
 [article title] [page] [column(left/right))] [lines]
