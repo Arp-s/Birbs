@@ -48,6 +48,10 @@
 </head>
 <body>
 <div class="app">
+    <a class="button summary-button">
+        <div class="bline one"></div>
+        <div class="bline two"></div>
+    </a>
     <aside class="summary" aria-label="Table des matières">
         <span class="status" id="status">Loading…</span>
         <a href="../../home.html"><img class="logo" src="../../assets/global/lwj_logo.png" alt="Lyall's Wren bird photo"><h3 class="summary-title">LWJ</h3></a>
@@ -66,7 +70,7 @@
             <button id="next">▶</button>
         </div>
 
-        <div class="controls ctrl-space">
+        <div class="controls ctrl-space zoom-controls">
             <button id="zoom-out">-</button>
             <span class="muted">Zoom</span>
             <input id="zoom" type="number" value="1.4" step="0.1" min="0.3" max="4" />
@@ -75,7 +79,8 @@
         </div>
         <div class="controls">
             <button id="download">Download</button>
-        </div>        
+        </div>
+        <div class="summary-out"></div>         
     </aside>
 
   <main class="main">

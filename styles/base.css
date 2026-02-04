@@ -21,6 +21,17 @@
     --title2-police-size: 28px;
     --title3-police-size: 22px;
 }
+@media (max-width: 500px) {
+    :root{
+        --p-police-size: 14px;
+        --source-police-size: 10px;
+        --title-police-size: 42px;
+        --subtitle-police-size: 36px;
+        --title1-police-size: 28px;
+        --title2-police-size: 22px;
+        --title3-police-size: 18px;
+    }
+}
 
 *, ::before, ::after {
     box-sizing: border-box;

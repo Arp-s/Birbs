@@ -188,6 +188,11 @@
                 width: 100%;
                 font-size: var(--p-police);
             }
+            @media (max-width: 1200px) {
+                .zoom-controls{
+                    display:none;
+                }
+            }
 
 
 .main {
