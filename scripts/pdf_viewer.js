@@ -29,6 +29,7 @@ let currentPage = 1;
 let numPages = 0;
 let scale = parseFloat(zoomInput.value) || 1.6;
 const RENDERED = new Map(); // pageNum -> canvas (for reuse)
+const dpr = window.devicePixelRatio || 1;
 
 /* UTIL: slugify simple */
 function slugify(text){
@@ -44,17 +45,22 @@ function setStatus(text){
 }
 
 /* Render d'une page dans un canvas (async) */
-async function renderPage(pageNum, opts = {}) {
-  // si déjà rendu et scale identique, on le remet en place
+async function renderPage(pageNum) {
   const key = pageNum + '@' + scale;
   if (RENDERED.has(key)) {
     return RENDERED.get(key);
   }
 
   const page = await pdfDoc.getPage(pageNum);
+  const dpr = window.devicePixelRatio || 1;
+
+  // viewport logique (CSS)
   const viewport = page.getViewport({ scale });
 
-  // wrapper div
+  // viewport réel (haute résolution)
+  const renderViewport = page.getViewport({ scale: scale * dpr });
+
+  // wrapper
   const wrapper = document.createElement('div');
   wrapper.className = 'page-container';
   wrapper.id = 'page-' + pageNum;
@@ -63,24 +69,27 @@ async function renderPage(pageNum, opts = {}) {
   // canvas
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
-  canvas.width = Math.floor(viewport.width);
-  canvas.height = Math.floor(viewport.height);
+
+  // résolution réelle
+  canvas.width  = Math.floor(renderViewport.width);
+  canvas.height = Math.floor(renderViewport.height);
+
+  // taille affichée
+  canvas.style.width  = Math.floor(viewport.width) + 'px';
+  canvas.style.height = Math.floor(viewport.height) + 'px';
+
   wrapper.appendChild(canvas);
 
-  // page label
-  const label = document.createElement('div');
-  label.style.cssText = 'position:relative; top:-8px; font-size:12px; color:#222; background:transparent; text-align:center';
-  label.textContent = 'Page ' + pageNum;
-  // wrapper.appendChild(label) // on laisse propre visuellement
+  // rendu
+  await page.render({
+    canvasContext: ctx,
+    viewport: renderViewport
+  }).promise;
 
-  // render
-  const renderTask = page.render({ canvasContext: ctx, viewport });
-  await renderTask.promise;
-
-  // append to container (but caller controls placement)
   RENDERED.set(key, { wrapper, canvas });
   return { wrapper, canvas, page };
 }
+
 
 /* Render visible pages: simple strategy -> render all pages sequentially (pour fiabilité) */
 async function renderAllPages() {
@@ -114,7 +123,7 @@ async function generateThumbs() {
   thumbsEl.innerHTML = '';
   for (let i = 1; i <= numPages; i++) {
     const page = await pdfDoc.getPage(i);
-    const vp = page.getViewport({ scale: 0.2 });
+    const vp = page.getViewport({ scale: 0.2*dpr });
     const canvas = document.createElement('canvas');
     canvas.width = Math.floor(vp.width);
     canvas.height = Math.floor(vp.height);
@@ -206,6 +215,8 @@ async function extractHeadings() {
   for (let p = 1; p <= numPages; p++) {
     const page = await pdfDoc.getPage(p);
     const textContent = await page.getTextContent();
+    const viewport = page.getViewport({ scale: 1 });
+    const pageHeight = viewport.height;
 
     // Regrouper items par "ligne" en utilisant la coord y (transform[5])
     const lines = []; // {y, items: [{str, fontSize}]}
@@ -238,8 +249,10 @@ async function extractHeadings() {
 
     // heuristique: titres = lignes >= median * 1.5 (ajustable)
     const threshold = median * 1.5;
+    const TOP_CUTOFF = 0.3;
 
     processedLines.forEach(l => {
+      if (p === 1 && l.y > pageHeight * (1 - TOP_CUTOFF)) return
       if (l.avgSize >= threshold && l.text.length < 120) {
         const text = l.text;
         const slug = slugify(text).slice(0,80) || ('p' + p + '-' + Math.random().toString(36).slice(2,8));
