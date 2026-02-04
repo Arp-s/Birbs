@@ -1,14 +1,24 @@
 const button = document.querySelector(".summary-button");
+const link = document.querySelector(".summary-list");
+const thumb = document.querySelector(".thumbs");
 const out = document.querySelector(".summary-out");
-const colorPickerContainer = document.querySelector(".summary");
+const summaryContainer = document.querySelector(".summary");
 
 
 button.addEventListener("click", e => {
     button.classList.toggle("active");
-    colorPickerContainer.classList.toggle("open");
+    summaryContainer.classList.toggle("open");
+});
+link.addEventListener("click", e => {   
+    button.classList.toggle("active");
+    summaryContainer.classList.toggle("open");
+});
+thumb.addEventListener("click", e => {
+    button.classList.toggle("active");
+    summaryContainer.classList.toggle("open");
 });
 
 out.addEventListener("click", e => {
     button.classList.remove("active");
-    colorPickerContainer.classList.remove("open");
+    summaryContainer.classList.remove("open");
 });
