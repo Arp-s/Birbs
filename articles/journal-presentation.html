@@ -37,11 +37,6 @@
 
     <meta property="og:url" content="">
 
-    <meta property="og:image" content="">
-    <meta name="twitter:image" content="">
-    <meta property="og:image:alt" content="">
-    <meta name="twitter:image:alt" content="">
-
     <meta name="theme-color" content="#646e5f" data-react-helmet="true" />
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,9 +46,14 @@
 
     <script>const URL_PDF = 'journal-presentation.pdf';</script>
     <script type="module" src="../scripts/pdf_viewer.js"></script>
+    <script type="module" src="../scripts/button.js"></script>
 </head>
 <body>
 <div class="app">
+    <a class="button summary-button">
+        <div class="bline one"></div>
+        <div class="bline two"></div>
+    </a>
     <aside class="summary" aria-label="Table des matières">
         <span class="status" id="status">Loading…</span>
         <a href="../home.html"><img class="logo" src="../assets/global/lwj_logo.png" alt="Lyall's Wren bird photo"><h3 class="summary-title">LWJ</h3></a>
@@ -81,7 +81,8 @@
         </div>
         <div class="controls">
             <button id="download">Download</button>
-        </div>        
+        </div>  
+        <div class="summary-out"></div>    
     </aside>
 
   <main class="main">

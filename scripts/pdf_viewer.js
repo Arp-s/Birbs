@@ -27,7 +27,8 @@ const downloadBtn = document.getElementById('download');
 let pdfDoc = null;
 let currentPage = 1;
 let numPages = 0;
-let scale = parseFloat(zoomInput.value) || 1.6;
+let scale = 1;
+// let scale = parseFloat(zoomInput.value) || 1.6;
 const RENDERED = new Map(); // pageNum -> canvas (for reuse)
 const dpr = window.devicePixelRatio || 1;
 
@@ -37,6 +38,25 @@ function slugify(text){
     .replace(/[^\w\s-]/g,'')
     .trim()
     .replace(/\s+/g,'-');
+}
+
+async function computeInitialScale() {
+  const isSmallScreen = window.innerWidth < 850;
+
+  // Desktop : zoom fixe, point.
+  if (!isSmallScreen) {
+    return 1.6;
+  }
+
+  // Mobile : fit-width exact
+  const page = await pdfDoc.getPage(1);
+  const viewport = page.getViewport({ scale: 1 });
+
+  const wrap = document.getElementById('viewer-wrap');
+  const availableWidth = wrap.clientWidth;
+
+  // ratio largeur visible / largeur PDF
+  return availableWidth / viewport.width;
 }
 
 /* Affiche message court */
@@ -306,6 +326,10 @@ async function init() {
     await extractHeadings();
 
     // render initial area
+    scale = await computeInitialScale();
+    zoomInput.value = scale.toFixed(2);
+
+    // render initial
     await renderAllPages();
     setTimeout(() => {setStatus('');}, 1000);
   } catch (err) {
@@ -314,5 +338,4 @@ async function init() {
   }
 }
 
-/* kick off */
 init();
