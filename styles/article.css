@@ -20,6 +20,8 @@
 }
 .summary-button {
     display: none;
+    height: 0;
+    width: 0;
 }
 @media (max-width: 850px) {
     .summary-button {
