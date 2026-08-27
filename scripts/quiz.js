@@ -1,6 +1,5 @@
-// ---------------------------------------------------------------------------
-// Quiz state
-// ---------------------------------------------------------------------------
+// -----Quiz state ----- //
+
 let birds = [];             // full birbs.json dataset
 let currentBird = null;     // bird being asked in the current question
 let currentForme = null;    // photo variant ("adulte", "vol", ...) being shown
@@ -9,19 +8,28 @@ let answered = false;       // true once the user has clicked an option
 let correctCount = 0;       // correct answers given this session
 let totalCount = 0;         // questions answered this session
 
-// ---------------------------------------------------------------------------
-// DOM references
-// ---------------------------------------------------------------------------
+// Max number of the last-asked birds kept out of the draw, and the list itself
+// (most recent id first). Once it reaches HISTORY_SIZE, adding a new id drops
+// the oldest one (the 50th), which then becomes eligible to be drawn again.
+const HISTORY_SIZE = 50;
+let recentBirdIds = [];
+
+// Delay (ms) before automatically moving to the next question after an answer
+const AUTO_NEXT_DELAY = 1500;
+
+// French display labels for forme codes that need an accent / different wording
+// than their raw value in birbs.json (e.g. "juvenile" -> "juvénile")
+const FORME_LABELS = { juvenile: "juvénile", vol: "en vol" };
+
+// ----- DOM references ----- //
 const imageEl = document.getElementById("quiz-image");
 const optionsEl = document.getElementById("quiz-options");
 const feedbackEl = document.getElementById("quiz-feedback");
-const nextBtn = document.getElementById("quiz-next");
 const scoreCorrectEl = document.getElementById("score-correct");
 const scoreTotalEl = document.getElementById("score-total");
 
-// ---------------------------------------------------------------------------
-// Bootstrap: load the bird database, then start the quiz
-// ---------------------------------------------------------------------------
+// ----- Bootstrap: load the bird database, then start the quiz ----- //
+
 fetch("birbs.json")
     .then(res => res.json())
     .then(data => {
@@ -33,11 +41,21 @@ fetch("birbs.json")
         console.error("Failed to load birbs.json:", err);
     });
 
-nextBtn.addEventListener("click", newQuestion);
+// Return the nice French label for a forme code, falling back to the raw value
+function formatForme(forme) {
+    return FORME_LABELS[forme] || forme;
+}
 
-// ---------------------------------------------------------------------------
-// Helpers
-// ---------------------------------------------------------------------------
+// Record a bird as just asked: push its id to the front of the history and,
+// once it grows past HISTORY_SIZE, drop everything past the 50th (oldest) entry
+function rememberBird(id) {
+    recentBirdIds.unshift(id);
+    if (recentBirdIds.length > HISTORY_SIZE) {
+        recentBirdIds.length = HISTORY_SIZE;
+    }
+}
+
+// ----- Helpers ----- //
 
 // Pick one random element from an array
 function randomFrom(arr) {
@@ -106,18 +124,20 @@ function buildPhotoPath(bird, forme) {
     return `${bird.classification}_${forme}.jpg`;
 }
 
-// ---------------------------------------------------------------------------
-// Question lifecycle
-// ---------------------------------------------------------------------------
+// ----- Question lifecycle ----- //
 
 // Start a new question: pick a random bird + forme, build the 4 options, render everything
 function newQuestion() {
     answered = false;
     feedbackEl.textContent = "";
     feedbackEl.className = "quiz-feedback";
-    nextBtn.classList.add("hidden");
 
-    currentBird = randomFrom(birds);
+    // Draw among birds not asked in the last HISTORY_SIZE questions
+    // (falls back to the full list if the pool were ever empty, e.g. a very small birbs.json)
+    const pool = birds.filter(b => !recentBirdIds.includes(b.id));
+    currentBird = randomFrom(pool.length > 0 ? pool : birds);
+    rememberBird(currentBird.id);
+
     currentForme = randomFrom(currentBird.formes);
 
     imageEl.src = buildPhotoPath(currentBird, currentForme);
@@ -160,11 +180,12 @@ function handleAnswer(selectedBird, btnEl) {
 
     if (isCorrect) {
         correctCount++;
-        feedbackEl.textContent = "Bonne réponse !";
+        // e.g. "Bonne réponse ! Mésange charbonnière juvénile"
+        feedbackEl.textContent = `Bonne réponse ! ${currentBird.name_fr} ${formatForme(currentForme)}`;
         feedbackEl.classList.add("correct");
         btnEl.classList.add("correct");
     } else {
-        feedbackEl.textContent = `Faux ! C'était : ${currentBird.name_fr} (${currentBird.name_la})`;
+        feedbackEl.textContent = `Faux ! C'était : ${currentBird.name_fr} ${formatForme(currentForme)} (${currentBird.name_la})`;
         feedbackEl.classList.add("incorrect");
         btnEl.classList.add("incorrect");
 
@@ -178,7 +199,8 @@ function handleAnswer(selectedBird, btnEl) {
     // Lock all options so the user can't answer twice
     currentButtons.forEach(entry => entry.btn.classList.add("disabled"));
 
-    nextBtn.classList.remove("hidden");
+    // Automatically load the next question, no button needed
+    setTimeout(newQuestion, AUTO_NEXT_DELAY);
 }
 
 // Refresh the score counters displayed above the quiz card

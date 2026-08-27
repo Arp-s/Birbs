@@ -23,8 +23,8 @@
     "classification": "Aves/Anseriformes/Anatidae/Aythya/Aythya_ferina",
     "formes": [
       "adulte",
-      "vol",
-      "juvenile"
+      "femelle",
+      "vol"
     ],
     "date": "01-01-2026",
     "size": "48"
@@ -333,22 +333,6 @@
     ],
     "date": "01-01-2025",
     "size": "45"
-  },
-  {
-    "file": "Aves/Passeriformes/Corvidae/Pica/Picus_viridis.html",
-    "id": "Picus_viridis",
-    "name_la": "Picus viridis",
-    "name_fr": "Pic vert",
-    "name_en": "European green woodpecker",
-    "classification": "Aves/Passeriformes/Corvidae/Pica/Picus_viridis",
-    "formes": [
-      "adulte",
-      "femelle",
-      "vol",
-      "juvenile"
-    ],
-    "date": "01-01-2026",
-    "size": "30"
   },
   {
     "file": "Aves/Passeriformes/Fringillidae/Fringilla/Fringilla_coelebs.html",
@@ -762,8 +746,7 @@
     "classification": "Aves/Piciformes/Picidae/Dendrocopos/Dendrocopos_leucotos",
     "formes": [
       "adulte",
-      "femelle",
-      "juvenile"
+      "femelle"
     ],
     "date": "01-01-2026",
     "size": "27"
@@ -809,20 +792,6 @@
     ],
     "date": "01-01-2026",
     "size": "14"
-  },
-  {
-    "file": "Aves/Piciformes/Picidae/Dryocopus/Dryobates/Dryobates_minor.html",
-    "id": "Dryobates_minor",
-    "name_la": "Dryobates minor",
-    "name_fr": "Pic épeichette",
-    "name_en": "Middle spotted woodpecker",
-    "classification": "Aves/Piciformes/Picidae/Dryocopus/Dryobates/Dryobates_minor",
-    "formes": [
-      "adulte",
-      "femelle"
-    ],
-    "date": "01-01-2026",
-    "size": "21"
   },
   {
     "file": "Aves/Piciformes/Picidae/Dryocopus/Dryocopus_martius.html",
@@ -875,8 +844,7 @@
     "classification": "Aves/Piciformes/Picidae/Picus/Picus_sharpei",
     "formes": [
       "adulte",
-      "femelle",
-      "juvenile"
+      "femelle"
     ],
     "date": "01-01-2026",
     "size": "32"

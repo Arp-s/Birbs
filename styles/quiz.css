@@ -60,10 +60,10 @@
     text-align: center;
 }
     .quiz-feedback.correct {
-        color: #2f7d32;
+        color: #7de180;
     }
     .quiz-feedback.incorrect {
-        color: #a12727;
+        color: #dc5151;
     }
 
 /* Grid holding the 4 answer buttons */
