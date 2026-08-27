@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./assets/lwj_logo.ico">
+        <link rel="stylesheet" href="./styles/base.css">
+        <link rel="stylesheet" href="./styles/global.css">
+        <link rel="stylesheet" href="./styles/quiz.css">
+
+        <!-- Web Integration -->
+        <meta property="og:site_name" content="Birbs">
+        <meta name="twitter:site" content="Birbs">
+        <meta property="og:type" content="website">
+
+        <title>Quiz - Birbs</title>
+        <meta property="og:title" content="Quiz">
+        <meta name="twitter:title" content="Quiz">
+
+        <meta name="description" content="Teste tes connaissances en identification des oiseaux.">
+        <meta property="og:description" content="Teste tes connaissances en identification des oiseaux.">
+        <meta name="twitter:description" content="Teste tes connaissances en identification des oiseaux.">
+
+        <meta name="keywords" content="oiseaux ornithologie quiz">
+
+        <meta name="author" content="Arp">
+        <meta property="article:author" content="Arp">
+        <meta name="twitter:creator" content="Arp">
+
+        <meta name="theme-color" content="#646e5f" data-react-helmet="true" />
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="Content-Language" content="fr">
+        <meta property="og:locale" content="fr_FR">
+        <meta name="twitter:card" content="summary_large_image">
+    </head>
+    <body>
+        <div class="background"></div>
+
+        <div class="page">
+                <div class="quiz-head-flex">
+                    <h1 class="quiz-title"><a href="home.html">Birbs</a></h1>
+                </div>
+                <div class="line"></div>
+
+            <!-- Quiz section: everything is generated / handled by scripts/quiz.js -->
+            <div class="quiz-container">
+
+                <!-- Running session score -->
+                <div class="quiz-score">
+                    Score : <span id="score-correct">0</span> / <span id="score-total">0</span>
+                </div>
+
+                <div class="quiz-card">
+                    <!-- Photo of the bird to identify -->
+                    <div class="quiz-image-wrapper">
+                        <img id="quiz-image" class="quiz-image" src="" alt="Photo de l'oiseau à identifier">
+                    </div>
+
+                    <!-- Feedback message shown once the user has answered -->
+                    <p class="quiz-feedback" id="quiz-feedback"></p>
+
+                    <!-- The 4 answer options, injected by JS -->
+                    <div class="quiz-options" id="quiz-options"></div>
+
+                    <!-- Move on to the next bird -->
+                    <button id="quiz-next" class="quiz-next hidden">Suivant &rarr;</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/quiz.js"></script>
+    </body>
+</html>

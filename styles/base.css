@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Yeseva+One&display=swap');
 
 :root{
-    --main-color:  rgb(60, 95, 60);
-    --second-color: rgb(255, 255, 255);
-    --third-color: rgb(55, 70, 55);
+    --main-color:  rgb(177, 65, 0);
+    --second-color: rgb(130, 103, 80);
+    --third-color: rgb(158, 104, 73);
 
     --text-color: rgb(0, 0, 0);
-    --background-color : rgb(100, 110, 95);
-    --background-color-o1 : rgba(100, 110, 95, 0.1);
-    --background-color-o2 : rgba(100, 110, 95, 0.2);
+    --background-color : rgb(160, 125, 95);
+    --background-color-o1 : rgba(160, 125, 95, 0.2);
+    --background-color-o2 : rgba(160, 125, 95, 0.5);
 
     --title-police: "Yeseva One", arial;
     --p-police: "Alice", arial;
@@ -41,33 +41,46 @@
     scrollbar-color: var(--third-color) rgba(0, 0, 0, 0);
 }
 *::selection {
-    background:var(--third-color);
-    color:var(--second-color);
+    background:var(--main-color);
+    color:var(--text-color);
     border-color: var(--main-color);
 }
 *::-moz-selection {
-    background:var(--third-color);
-    color:var(--second-color);
+    background:var(--main-color);
+    color:var(--text-color);
 }
 *::-webkit-selection {
-    background:var(--third-color);
-    color:var(--second-color);
+    background:var(--main-color);
+    color:var(--text-color);
 }
 input::-moz-selection {
-    background: var(--background-color-o2);
+    background: var(--main-color);
     border-color: var(--main-color);
 }
 
 html {
     scroll-behavior: smooth;
 }
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
 
 u {
   text-decoration: underline;
 }
 
+.i {
+    font-style: italic;
+}
+.g {
+    font-weight: bold;
+}
+
 body {
-    background-color: var(--background-color);
+    background-color: var(--second-color);
+    height: 100vh;
+    width: 100vw;
 }
 body::-webkit-scrollbar {
     width: 8px;
@@ -81,10 +94,11 @@ body::-webkit-scrollbar-thumb {
         box-sizing: border-box;
         border: 1px solid var(--main-color);
         border-radius: 0;
-        background-color: var(--background-color-o1);
+        background-color: var(--second-color);
+        font-size: 14px;
     }
     button:hover {
-        background-color: var(--background-color-o2);
+        background-color: var(--third-color);
     }
 
     /* Inputs */
@@ -93,10 +107,10 @@ body::-webkit-scrollbar-thumb {
         box-sizing: border-box;
         border: 1px solid var(--main-color);
         border-radius: 0;
-        background-color: var(--background-color-o1);
+        background-color: var(--second-color);
     }
     input:hover {
-        background-color: var(--background-color-o2);
+        background-color: var(--third-color);
     }
     input[type=text] {
         height: 30px;
@@ -171,7 +185,6 @@ body::-webkit-scrollbar-thumb {
     .custom-select {
         position: relative;
         display: inline-block;
-        width: 20%;
     }
         .select-button {
             display: flex;
@@ -182,7 +195,7 @@ body::-webkit-scrollbar-thumb {
             padding: 0 10px;
             border: 1px solid var(--main-color);
             border-radius: 0;
-            background-color: var(--background-color-o1);
+            background-color: var(--second-color);
             font-size: 14px;
             cursor: pointer;
         }
@@ -201,10 +214,7 @@ body::-webkit-scrollbar-thumb {
             padding: 10px;
             border: 1px solid var(--main-color);
             border-radius: 0;
-            background: url(../assets/global/background.jpg);
-            background-size: cover;
-            background-position: center;
-            background-color: var(--background-color-o1);
+            background-color: var(--second-color);
             list-style: none;
             box-shadow: 0px 0px 10px rgba(55, 70, 55, 0.3);
             overflow-y: auto;
@@ -220,8 +230,7 @@ body::-webkit-scrollbar-thumb {
                 border: 1px solid var(--main-color);
             }
             .select-dropdown li:hover {
-                background-color: rgba(55, 70, 55, 0.2);
-                border: 1px dashed var(--main-color);
+                background-color: var(--third-color);
             }
             .select-dropdown.hidden {
                 display: none;

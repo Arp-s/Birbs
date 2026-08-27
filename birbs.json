@@ -1,0 +1,1004 @@
+[
+  {
+    "file": "Aves/Anseriformes/Anatidae/Anas/Anas_platyrhynchos.html",
+    "id": "Anas_platyrhynchos",
+    "name_la": "Anas platyrhynchos",
+    "name_fr": "Canard colvert",
+    "name_en": "Mallard",
+    "classification": "Aves/Anseriformes/Anatidae/Anas/Anas_platyrhynchos",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "60"
+  },
+  {
+    "file": "Aves/Anseriformes/Anatidae/Aythya/Aythya_ferina.html",
+    "id": "Aythya_ferina",
+    "name_la": "Aythya ferina",
+    "name_fr": "Fuligule milouin",
+    "name_en": "Common pochard",
+    "classification": "Aves/Anseriformes/Anatidae/Aythya/Aythya_ferina",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "48"
+  },
+  {
+    "file": "Aves/Anseriformes/Anatidae/Cygnus/Cygnus_atratus.html",
+    "id": "Cygnus_atratus",
+    "name_la": "Cygnus atratus",
+    "name_fr": "Cygne noir",
+    "name_en": "Black swan",
+    "classification": "Aves/Anseriformes/Anatidae/Cygnus/Cygnus_atratus",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "125"
+  },
+  {
+    "file": "Aves/Anseriformes/Anatidae/Cygnus/Cygnus_columbianus.html",
+    "id": "Cygnus_columbianus (bewickii)",
+    "name_la": "Cygnus columbianus (bewickii)",
+    "name_fr": "Cygne sifleur (de Bewick)",
+    "name_en": "Tundra (Bewick's) swan",
+    "classification": "Aves/Anseriformes/Anatidae/Cygnus/Cygnus_columbianus",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "132"
+  },
+  {
+    "file": "Aves/Anseriformes/Anatidae/Cygnus/Cygnus_cygnus.html",
+    "id": "Cygnus_cygnus",
+    "name_la": "Cygnus cygnus",
+    "name_fr": "Cygne chanteur",
+    "name_en": "Whooper swan",
+    "classification": "Aves/Anseriformes/Anatidae/Cygnus/Cygnus_cygnus",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "152"
+  },
+  {
+    "file": "Aves/Anseriformes/Anatidae/Cygnus/Cygnus_olor.html",
+    "id": "Cygnus_olor",
+    "name_la": "Cygnus olor",
+    "name_fr": "Cygne tuberculé",
+    "name_en": "Mute swan",
+    "classification": "Aves/Anseriformes/Anatidae/Cygnus/Cygnus_olor",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "147"
+  },
+  {
+    "file": "Aves/Ciconiiformes/Ciconiidae/Ciconia/Ciconia_ciconia.html",
+    "id": "Ciconia_ciconia",
+    "name_la": "Ciconia ciconia",
+    "name_fr": "Cigogne blanche",
+    "name_en": "White stork",
+    "classification": "Aves/Ciconiiformes/Ciconiidae/Ciconia/Ciconia_ciconia",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "107"
+  },
+  {
+    "file": "Aves/Ciconiiformes/Ciconiidae/Ciconia/Ciconia_nigra.html",
+    "id": "Ciconia_nigra",
+    "name_la": "Ciconia nigra",
+    "name_fr": "Cigogne noire",
+    "name_en": "Black stork",
+    "classification": "Aves/Ciconiiformes/Ciconiidae/Ciconia/Ciconia_nigra",
+    "formes": [
+      "adulte",
+      "vol"
+    ],
+    "date": "01-01-2026",
+    "size": "92"
+  },
+  {
+    "file": "Aves/Columbiformes/Columbidae/Columba/Columba_livia.html",
+    "id": "Columba_livia",
+    "name_la": "Columba livia",
+    "name_fr": "Pigeon biset",
+    "name_en": "Rock dove",
+    "classification": "Aves/Columbiformes/Columbidae/Columba/Columba_livia",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile",
+      "variante1"
+    ],
+    "date": "01-01-2025",
+    "size": "33"
+  },
+  {
+    "file": "Aves/Columbiformes/Columbidae/Columba/Columba_oenas.html",
+    "id": "Columba_oenas",
+    "name_la": "Columba oenas",
+    "name_fr": "Pigeon colombin",
+    "name_en": "Stock dove",
+    "classification": "Aves/Columbiformes/Columbidae/Columba/Columba_oenas",
+    "formes": [
+      "adulte"
+    ],
+    "date": "01-01-2026",
+    "size": "30"
+  },
+  {
+    "file": "Aves/Columbiformes/Columbidae/Columba/Columba_palumbus.html",
+    "id": "Columba_palumbus",
+    "name_la": "Columba palumbus",
+    "name_fr": "Pigeon ramier",
+    "name_en": "Common wood pigeon",
+    "classification": "Aves/Columbiformes/Columbidae/Columba/Columba_palumbus",
+    "formes": [
+      "adulte",
+      "vol"
+    ],
+    "date": "01-01-2025",
+    "size": "41"
+  },
+  {
+    "file": "Aves/Columbiformes/Columbidae/Streptopelia/Streptopelia_decaocto.html",
+    "id": "Streptopelia_decaocto",
+    "name_la": "Streptopelia decaocto",
+    "name_fr": "Tourterelle turque",
+    "name_en": "Eurasian collared dove",
+    "classification": "Aves/Columbiformes/Columbidae/Streptopelia/Streptopelia_decaocto",
+    "formes": [
+      "adulte",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "32"
+  },
+  {
+    "file": "Aves/Columbiformes/Columbidae/Streptopelia/Streptopelia_turtur.html",
+    "id": "Streptopelia_turtur",
+    "name_la": "Streptopelia turtur",
+    "name_fr": "Tourterelle des bois",
+    "name_en": "Eurasian turtle dove",
+    "classification": "Aves/Columbiformes/Columbidae/Streptopelia/Streptopelia_turtur",
+    "formes": [
+      "adulte"
+    ],
+    "date": "01-01-2026",
+    "size": "26"
+  },
+  {
+    "file": "Aves/Gruiformes/Gruidae/Grus/Grus_grus.html",
+    "id": "Grus_grus",
+    "name_la": "Grus grus",
+    "name_fr": "Grue cendrée",
+    "name_en": "Common crane",
+    "classification": "Aves/Gruiformes/Gruidae/Grus/Grus_grus",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "120"
+  },
+  {
+    "file": "Aves/Passeriformes/Aegithalidae/Aegithalos/Aegithalos_caudatus.html",
+    "id": "Aegithalos_caudatus",
+    "name_la": "Aegithalos caudatus",
+    "name_fr": "Orite à longue queue",
+    "name_en": "Long-tailed bushtit",
+    "classification": "Aves/Passeriformes/Aegithalidae/Aegithalos/Aegithalos_caudatus",
+    "formes": [
+      "adulte"
+    ],
+    "date": "01-01-2026",
+    "size": "13"
+  },
+  {
+    "file": "Aves/Passeriformes/Carduelinae/Chloris/Chloris_chloris.html",
+    "id": "Chloris_chloris",
+    "name_la": "Chloris chloris",
+    "name_fr": "Verdier d'Europe",
+    "name_en": "European greenfinch",
+    "classification": "Aves/Passeriformes/Carduelinae/Chloris/Chloris_chloris",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "01-01-2026",
+    "size": "14"
+  },
+  {
+    "file": "Aves/Passeriformes/Corvidae/Coloeus/Coloeus_monedula.html",
+    "id": "Coloeus_monedula",
+    "name_la": "Coloeus monedula",
+    "name_fr": "Choucas des tours",
+    "name_en": "Eurasian jay",
+    "classification": "Aves/Passeriformes/Corvidae/Coloeus/Coloeus_monedula",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "35"
+  },
+  {
+    "file": "Aves/Passeriformes/Corvidae/Corvus/Corvus_corax.html",
+    "id": "Corvus_corax",
+    "name_la": "Corvus corax",
+    "name_fr": "Grand corbeau",
+    "name_en": "Common raven",
+    "classification": "Aves/Passeriformes/Corvidae/Corvus/Corvus_corax",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "60"
+  },
+  {
+    "file": "Aves/Passeriformes/Corvidae/Corvus/Corvus_cornix.html",
+    "id": "Corvus_cornix",
+    "name_la": "Corvus cornix",
+    "name_fr": "Corneille mantelée",
+    "name_en": "Hooded Crow",
+    "classification": "Aves/Passeriformes/Corvidae/Corvus/Corvus_cornix",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "50"
+  },
+  {
+    "file": "Aves/Passeriformes/Corvidae/Corvus/Corvus_corone.html",
+    "id": "Corvus_corone",
+    "name_la": "Corvus corone",
+    "name_fr": "Corneille noire",
+    "name_en": "Carrion Crow",
+    "classification": "Aves/Passeriformes/Corvidae/Corvus/Corvus_corone",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "50"
+  },
+  {
+    "file": "Aves/Passeriformes/Corvidae/Corvus/Corvus_frugilegus.html",
+    "id": "Corvus_frugilegus",
+    "name_la": "Corvus frugilegus",
+    "name_fr": "Corbeau freux",
+    "name_en": "Rook",
+    "classification": "Aves/Passeriformes/Corvidae/Corvus/Corvus_frugilegus",
+    "formes": [
+      "adulte",
+      "vol"
+    ],
+    "date": "01-01-2025",
+    "size": "50"
+  },
+  {
+    "file": "Aves/Passeriformes/Corvidae/Garrulus/Garrulus_glandarius.html",
+    "id": "Garrulus_glandarius",
+    "name_la": "Garrulus glandarius",
+    "name_fr": "Geaie des chênes",
+    "name_en": "Western jackdaw",
+    "classification": "Aves/Passeriformes/Corvidae/Garrulus/Garrulus_glandarius",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "33"
+  },
+  {
+    "file": "Aves/Passeriformes/Corvidae/Pica/Pica_pica.html",
+    "id": "Pica_pica",
+    "name_la": "Pica pica",
+    "name_fr": "Pie bavarde",
+    "name_en": "Eurasian magpie",
+    "classification": "Aves/Passeriformes/Corvidae/Pica/Pica_pica",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "45"
+  },
+  {
+    "file": "Aves/Passeriformes/Corvidae/Pica/Picus_viridis.html",
+    "id": "Picus_viridis",
+    "name_la": "Picus viridis",
+    "name_fr": "Pic vert",
+    "name_en": "European green woodpecker",
+    "classification": "Aves/Passeriformes/Corvidae/Pica/Picus_viridis",
+    "formes": [
+      "adulte",
+      "femelle",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "30"
+  },
+  {
+    "file": "Aves/Passeriformes/Fringillidae/Fringilla/Fringilla_coelebs.html",
+    "id": "Fringilla_coelebs",
+    "name_la": "Fringilla coelebs",
+    "name_fr": "Pinson des arbres",
+    "name_en": "Eurasian chaffinchg",
+    "classification": "Aves/Passeriformes/Fringillidae/Fringilla/Fringilla_coelebs",
+    "formes": [
+      "adulte",
+      "femelle",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "15"
+  },
+  {
+    "file": "Aves/Passeriformes/Fringillidae/Fringilla/Fringilla_montifringilla.html",
+    "id": "Fringilla_montifringilla",
+    "name_la": "Fringilla montifringilla",
+    "name_fr": "Pinson du nord",
+    "name_en": "Brambling",
+    "classification": "Aves/Passeriformes/Fringillidae/Fringilla/Fringilla_montifringilla",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "01-01-2026",
+    "size": "15"
+  },
+  {
+    "file": "Aves/Passeriformes/Muscicapidae/Erithacus/Erithacus_rubecula.html",
+    "id": "Erithacus_rubecula",
+    "name_la": "Erithacus rubecula",
+    "name_fr": "Rouge gorge familier",
+    "name_en": "European robin",
+    "classification": "Aves/Passeriformes/Muscicapidae/Erithacus/Erithacus_rubecula",
+    "formes": [
+      "adulte",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "13"
+  },
+  {
+    "file": "Aves/Passeriformes/Panuridae/Panurus/Panurus_biarmicus.html",
+    "id": "Panurus_biarmicus",
+    "name_la": "Panurus biarmicus",
+    "name_fr": "Panure à moustache",
+    "name_en": "Bearded reedling",
+    "classification": "Aves/Passeriformes/Panuridae/Panurus/Panurus_biarmicus",
+    "formes": [
+      "adulte",
+      "femelle",
+      "juvenile"
+    ],
+    "date": "12-03-2026",
+    "size": "16"
+  },
+  {
+    "file": "Aves/Passeriformes/Paridae/Cyanistes/Cyanistes_caeruleus.html",
+    "id": "Cyanistes_caeruleus",
+    "name_la": "Cyanistes caeruleus",
+    "name_fr": "Mésange bleue",
+    "name_en": "Blue tit",
+    "classification": "Aves/Passeriformes/Paridae/Cyanistes/Cyanistes_caeruleus",
+    "formes": [
+      "adulte",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "11"
+  },
+  {
+    "file": "Aves/Passeriformes/Paridae/Lophophanes/Lophophanes_cristatus.html",
+    "id": "Lophophanes_cristatus",
+    "name_la": "Lophophanes cristatus",
+    "name_fr": "Mésange huppée",
+    "name_en": "Crested tit",
+    "classification": "Aves/Passeriformes/Paridae/Lophophanes/Lophophanes_cristatus",
+    "formes": [
+      "adulte",
+      "vol"
+    ],
+    "date": "01-01-2026",
+    "size": "11"
+  },
+  {
+    "file": "Aves/Passeriformes/Paridae/Parus/Parus_major.html",
+    "id": "Parus_major",
+    "name_la": "Parus major",
+    "name_fr": "Mésange charbonnière",
+    "name_en": "Great tit",
+    "classification": "Aves/Passeriformes/Paridae/Parus/Parus_major",
+    "formes": [
+      "adulte",
+      "femelle",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "14"
+  },
+  {
+    "file": "Aves/Passeriformes/Paridae/Periparus/Periparus_ater.html",
+    "id": "Periparus_ater",
+    "name_la": "Periparus ater",
+    "name_fr": "Mésange noire",
+    "name_en": "Coal tit",
+    "classification": "Aves/Passeriformes/Paridae/Periparus/Periparus_ater",
+    "formes": [
+      "adulte"
+    ],
+    "date": "01-01-2026",
+    "size": "10"
+  },
+  {
+    "file": "Aves/Passeriformes/Paridae/Poecile/Poecile_montanus.html",
+    "id": "Poecile_montanus",
+    "name_la": "Poecile montanus",
+    "name_fr": "Mésange boréale",
+    "name_en": "Marsh tit",
+    "classification": "Aves/Passeriformes/Paridae/Poecile/Poecile_montanus",
+    "formes": [
+      "adulte",
+      "vol"
+    ],
+    "date": "01-01-2026",
+    "size": "12"
+  },
+  {
+    "file": "Aves/Passeriformes/Paridae/Poecile/Poecile_palustris.html",
+    "id": "Poecile_palustris",
+    "name_la": "Poecile palustris",
+    "name_fr": "Mésange nonette",
+    "name_en": "Willow tit",
+    "classification": "Aves/Passeriformes/Paridae/Poecile/Poecile_palustris",
+    "formes": [
+      "adulte"
+    ],
+    "date": "01-01-2026",
+    "size": "11"
+  },
+  {
+    "file": "Aves/Passeriformes/Passeridae/Passer/Passer_domesticus.html",
+    "id": "Passer_domesticus",
+    "name_la": "Passer domesticus",
+    "name_fr": "Moineau domestique",
+    "name_en": "House sparrow",
+    "classification": "Aves/Passeriformes/Passeridae/Passer/Passer_domesticus",
+    "formes": [
+      "adulte",
+      "nuptial",
+      "femelle",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "16"
+  },
+  {
+    "file": "Aves/Passeriformes/Passeridae/Passer/Passer_italiae.html",
+    "id": "Passer_italiae",
+    "name_la": "Passer italiae",
+    "name_fr": "Moineau cisalpin",
+    "name_en": "Italian sparrow",
+    "classification": "Aves/Passeriformes/Passeridae/Passer/Passer_italiae",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "01-01-2026",
+    "size": "16"
+  },
+  {
+    "file": "Aves/Passeriformes/Passeridae/Passer/Passer_montanus.html",
+    "id": "Passer_montanus",
+    "name_la": "Passer montanus",
+    "name_fr": "Moineau friquet",
+    "name_en": "Eurasian tree sparrow",
+    "classification": "Aves/Passeriformes/Passeridae/Passer/Passer_montanus",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "14"
+  },
+  {
+    "file": "Aves/Passeriformes/Passeridae/Petronia/Petronia_petronia.html",
+    "id": "Petronia_petronia",
+    "name_la": "Petronia petronia",
+    "name_fr": "Moineau soulcie",
+    "name_en": "Rock sparrow",
+    "classification": "Aves/Passeriformes/Passeridae/Petronia/Petronia_petronia",
+    "formes": [
+      "adulte"
+    ],
+    "date": "01-01-2026",
+    "size": "15"
+  },
+  {
+    "file": "Aves/Passeriformes/Sittidae/Sitta/Sitta_europaea.html",
+    "id": "Sitta_europaea",
+    "name_la": "Sitta europaea",
+    "name_fr": "Sittelle torchepot",
+    "name_en": "Eurasian nuthatch",
+    "classification": "Aves/Passeriformes/Sittidae/Sitta/Sitta_europaea",
+    "formes": [
+      "adulte",
+      "vol"
+    ],
+    "date": "01-01-2026",
+    "size": "14"
+  },
+  {
+    "file": "Aves/Passeriformes/Turdidae/Turdus/Turdus_iliacus.html",
+    "id": "Turdus_iliacus",
+    "name_la": "Turdus iliacus",
+    "name_fr": "Grive mauvis",
+    "name_en": "Redwing",
+    "classification": "Aves/Passeriformes/Turdidae/Turdus/Turdus_iliacus",
+    "formes": [
+      "adulte"
+    ],
+    "date": "17-02-2026",
+    "size": "22"
+  },
+  {
+    "file": "Aves/Passeriformes/Turdidae/Turdus/Turdus_merula.html",
+    "id": "Turdus_merula",
+    "name_la": "Turdus merula",
+    "name_fr": "Merle noir",
+    "name_en": "Common blackbird",
+    "classification": "Aves/Passeriformes/Turdidae/Turdus/Turdus_merula",
+    "formes": [
+      "adulte",
+      "femelle",
+      "juvenile"
+    ],
+    "date": "01-01-2025",
+    "size": "26"
+  },
+  {
+    "file": "Aves/Passeriformes/Turdidae/Turdus/Turdus_philomelos.html",
+    "id": "Turdus_philomelos",
+    "name_la": "Turdus philomelos",
+    "name_fr": "Grive musicienne",
+    "name_en": "Song thrush",
+    "classification": "Aves/Passeriformes/Turdidae/Turdus/Turdus_philomelos",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "17-02-2026",
+    "size": "22"
+  },
+  {
+    "file": "Aves/Passeriformes/Turdidae/Turdus/Turdus_pilaris.html",
+    "id": "Turdus_pilaris",
+    "name_la": "Turdus pilaris",
+    "name_fr": "Grive litorne",
+    "name_en": "Fieldfare",
+    "classification": "Aves/Passeriformes/Turdidae/Turdus/Turdus_pilaris",
+    "formes": [
+      "adulte"
+    ],
+    "date": "17-02-2026",
+    "size": "26"
+  },
+  {
+    "file": "Aves/Passeriformes/Turdidae/Turdus/Turdus_torquatus.html",
+    "id": "Turdus_torquatus",
+    "name_la": "Turdus torquatus",
+    "name_fr": "Merle à plastron",
+    "name_en": "Ring ouzel",
+    "classification": "Aves/Passeriformes/Turdidae/Turdus/Turdus_torquatus",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "17-02-2026",
+    "size": "23"
+  },
+  {
+    "file": "Aves/Passeriformes/Turdidae/Turdus/Turdus_viscivorus.html",
+    "id": "Turdus_viscivorus",
+    "name_la": "Turdus viscivorus",
+    "name_fr": "Grive draine",
+    "name_en": "Mistle thrush",
+    "classification": "Aves/Passeriformes/Turdidae/Turdus/Turdus_viscivorus",
+    "formes": [
+      "adulte"
+    ],
+    "date": "17-02-2026",
+    "size": "27"
+  },
+  {
+    "file": "Aves/Pelecaniformes/Ardeidae/Ardea/Ardea_alba.html",
+    "id": "Ardea_alba",
+    "name_la": "Ardea alba",
+    "name_fr": "Grande aigrette",
+    "name_en": "Great egret",
+    "classification": "Aves/Pelecaniformes/Ardeidae/Ardea/Ardea_alba",
+    "formes": [
+      "adulte",
+      "nuptial",
+      "vol"
+    ],
+    "date": "16-02-2026",
+    "size": "90"
+  },
+  {
+    "file": "Aves/Pelecaniformes/Ardeidae/Ardea/Ardea_cinerea.html",
+    "id": "Ardea_cinerea",
+    "name_la": "Ardea cinerea",
+    "name_fr": "Héron cendré",
+    "name_en": "Grey heron",
+    "classification": "Aves/Pelecaniformes/Ardeidae/Ardea/Ardea_cinerea",
+    "formes": [
+      "adulte",
+      "nuptial",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "95"
+  },
+  {
+    "file": "Aves/Pelecaniformes/Ardeidae/Ardea/Ardea_ibis.html",
+    "id": "Ardea_ibis",
+    "name_la": "Ardea ibis",
+    "name_fr": "Héron garde-boeufs",
+    "name_en": "Western cattle egret",
+    "classification": "Aves/Pelecaniformes/Ardeidae/Ardea/Ardea_ibis",
+    "formes": [
+      "adulte",
+      "nuptial",
+      "vol",
+      "juvenile"
+    ],
+    "date": "16-02-2026",
+    "size": "92"
+  },
+  {
+    "file": "Aves/Pelecaniformes/Ardeidae/Ardea/Ardea_purpurea.html",
+    "id": "Ardea_purpurea",
+    "name_la": "Ardea purpurea",
+    "name_fr": "Héron pourpré",
+    "name_en": "Purple heron",
+    "classification": "Aves/Pelecaniformes/Ardeidae/Ardea/Ardea_purpurea",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "85"
+  },
+  {
+    "file": "Aves/Pelecaniformes/Ardeidae/Ardeola/Ardeola_ralloides.html",
+    "id": "Ardeola_ralloides",
+    "name_la": "Ardeola ralloides",
+    "name_fr": "Crabier chevelu",
+    "name_en": "Squacco heron",
+    "classification": "Aves/Pelecaniformes/Ardeidae/Ardeola/Ardeola_ralloides",
+    "formes": [
+      "adulte",
+      "nuptial",
+      "vol"
+    ],
+    "date": "16-02-2026",
+    "size": "45"
+  },
+  {
+    "file": "Aves/Pelecaniformes/Ardeidae/Egretta/Egretta_garzetta.html",
+    "id": "Egretta_garzetta",
+    "name_la": "Egretta garzetta",
+    "name_fr": "Aigrette garzette",
+    "name_en": "Little egret",
+    "classification": "Aves/Pelecaniformes/Ardeidae/Egretta/Egretta_garzetta",
+    "formes": [
+      "adulte",
+      "nuptial",
+      "vol"
+    ],
+    "date": "16-02-2026",
+    "size": "60"
+  },
+  {
+    "file": "Aves/Pelecaniformes/Ardeidae/Nycticorax/Nycticorax_nycticorax.html",
+    "id": "Nycticorax_nycticorax",
+    "name_la": "Nycticorax nycticorax",
+    "name_fr": "Bihoreau gris",
+    "name_en": "Black-crowned night heron",
+    "classification": "Aves/Pelecaniformes/Ardeidae/Nycticorax/Nycticorax_nycticorax",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "16-02-2026",
+    "size": "64"
+  },
+  {
+    "file": "Aves/Piciformes/Picidae/Dendrocopos/Dendrocopos_leucotos.html",
+    "id": "Dendrocopos_leucotos",
+    "name_la": "Dendrocopos leucotos",
+    "name_fr": "Pic à dos blanc",
+    "name_en": "White-backed woodpecker",
+    "classification": "Aves/Piciformes/Picidae/Dendrocopos/Dendrocopos_leucotos",
+    "formes": [
+      "adulte",
+      "femelle",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "27"
+  },
+  {
+    "file": "Aves/Piciformes/Picidae/Dendrocopos/Dendrocopos_major.html",
+    "id": "Dendrocopos_major",
+    "name_la": "Dendrocopos major",
+    "name_fr": "Pic épeiche",
+    "name_en": "Great spotted woodpecker",
+    "classification": "Aves/Piciformes/Picidae/Dendrocopos/Dendrocopos_major",
+    "formes": [
+      "adulte",
+      "femelle",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "22"
+  },
+  {
+    "file": "Aves/Piciformes/Picidae/Dendrocoptes/Dendrocoptes_medius.html",
+    "id": "Dendrocoptes_medius",
+    "name_la": "Dendrocoptes medius",
+    "name_fr": "Pic mar",
+    "name_en": "Middle spotted woodpecker",
+    "classification": "Aves/Piciformes/Picidae/Dendrocoptes/Dendrocoptes_medius",
+    "formes": [
+      "adulte"
+    ],
+    "date": "01-01-2026",
+    "size": "21"
+  },
+  {
+    "file": "Aves/Piciformes/Picidae/Dryobates/Dryobates_minor.html",
+    "id": "Dryobates_minor",
+    "name_la": "Dryobates minor",
+    "name_fr": "Pic épeichette",
+    "name_en": "Middle spotted woodpecker",
+    "classification": "Aves/Piciformes/Picidae/Dryobates/Dryobates_minor",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "01-01-2026",
+    "size": "14"
+  },
+  {
+    "file": "Aves/Piciformes/Picidae/Dryocopus/Dryobates/Dryobates_minor.html",
+    "id": "Dryobates_minor",
+    "name_la": "Dryobates minor",
+    "name_fr": "Pic épeichette",
+    "name_en": "Middle spotted woodpecker",
+    "classification": "Aves/Piciformes/Picidae/Dryocopus/Dryobates/Dryobates_minor",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "01-01-2026",
+    "size": "21"
+  },
+  {
+    "file": "Aves/Piciformes/Picidae/Dryocopus/Dryocopus_martius.html",
+    "id": "Dryocopus_martius",
+    "name_la": "Dryocopus martius",
+    "name_fr": "Pic noir",
+    "name_en": "Black woodpecker",
+    "classification": "Aves/Piciformes/Picidae/Dryocopus/Dryocopus_martius",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "01-01-2026",
+    "size": "50"
+  },
+  {
+    "file": "Aves/Piciformes/Picidae/Picoides/Picoides_tridactylus.html",
+    "id": "Picoides_tridactylus",
+    "name_la": "Picoides tridactylus",
+    "name_fr": "Pic tridactyle",
+    "name_en": "Eurasian three-toed woodpecker",
+    "classification": "Aves/Piciformes/Picidae/Picoides/Picoides_tridactylus",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "01-01-2026",
+    "size": "23"
+  },
+  {
+    "file": "Aves/Piciformes/Picidae/Picus/Picus_canus.html",
+    "id": "Picus_canus",
+    "name_la": "Picus canus",
+    "name_fr": "Pic cendré",
+    "name_en": "Grey-headed woodpecker",
+    "classification": "Aves/Piciformes/Picidae/Picus/Picus_canus",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "01-01-2026",
+    "size": "30"
+  },
+  {
+    "file": "Aves/Piciformes/Picidae/Picus/Picus_sharpei.html",
+    "id": "Picus_sharpei",
+    "name_la": "Picus sharpei",
+    "name_fr": "Pic de Sharpe",
+    "name_en": "Iberian green woodpecker",
+    "classification": "Aves/Piciformes/Picidae/Picus/Picus_sharpei",
+    "formes": [
+      "adulte",
+      "femelle",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "32"
+  },
+  {
+    "file": "Aves/Piciformes/Picidae/Picus/Picus_viridis.html",
+    "id": "Picus_viridis",
+    "name_la": "Picus viridis",
+    "name_fr": "Pic vert",
+    "name_en": "European green woodpecker",
+    "classification": "Aves/Piciformes/Picidae/Picus/Picus_viridis",
+    "formes": [
+      "adulte",
+      "femelle",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "32"
+  },
+  {
+    "file": "Aves/Podicipediformes/Podicipedidae/Podiceps/Podiceps_auritus.html",
+    "id": "Podiceps_auritus",
+    "name_la": "Podiceps auritus",
+    "name_fr": "Grèbe esclavon",
+    "name_en": "Horned grebe",
+    "classification": "Aves/Podicipediformes/Podicipedidae/Podiceps/Podiceps_auritus",
+    "formes": [
+      "adulte",
+      "nuptial",
+      "juvenile"
+    ],
+    "date": "13-03-2026",
+    "size": "34"
+  },
+  {
+    "file": "Aves/Podicipediformes/Podicipedidae/Podiceps/Podiceps_cristatus.html",
+    "id": "Podiceps_cristatus",
+    "name_la": "Podiceps cristatus",
+    "name_fr": "Grèbe huppé",
+    "name_en": "Great crested grebe",
+    "classification": "Aves/Podicipediformes/Podicipedidae/Podiceps/Podiceps_cristatus",
+    "formes": [
+      "adulte",
+      "nuptial",
+      "juvenile"
+    ],
+    "date": "01-01-2026",
+    "size": "50"
+  },
+  {
+    "file": "Aves/Podicipediformes/Podicipedidae/Podiceps/Podiceps_grisegena.html",
+    "id": "Podiceps_grisegena",
+    "name_la": "Podiceps grisegena",
+    "name_fr": "Grèbe jougris",
+    "name_en": "Black-necked grebe",
+    "classification": "Aves/Podicipediformes/Podicipedidae/Podiceps/Podiceps_grisegena",
+    "formes": [
+      "adulte",
+      "nuptial",
+      "juvenile"
+    ],
+    "date": "13-03-2026",
+    "size": "50"
+  },
+  {
+    "file": "Aves/Podicipediformes/Podicipedidae/Podiceps/Podiceps_nigricollis.html",
+    "id": "Podiceps_nigricollis",
+    "name_la": "Podiceps nigricollis",
+    "name_fr": "Grèbe à cou noir",
+    "name_en": "Black-necked grebe",
+    "classification": "Aves/Podicipediformes/Podicipedidae/Podiceps/Podiceps_nigricollis",
+    "formes": [
+      "adulte",
+      "nuptial"
+    ],
+    "date": "13-03-2026",
+    "size": "31"
+  },
+  {
+    "file": "Aves/Podicipediformes/Podicipedidae/Tachybaptus/Tachybaptus_ruficollis.html",
+    "id": "Tachybaptus_ruficollis",
+    "name_la": "Tachybaptus ruficollis",
+    "name_fr": "Grèbe castagneux",
+    "name_en": "Little grebe",
+    "classification": "Aves/Podicipediformes/Podicipedidae/Tachybaptus/Tachybaptus_ruficollis",
+    "formes": [
+      "adulte",
+      "nuptial",
+      "juvenile"
+    ],
+    "date": "13-03-2026",
+    "size": "24"
+  },
+  {
+    "file": "Aves/Strigiformes/ Strigidae/Asio/Asio_flammeus.html",
+    "id": "Asio_flammeus",
+    "name_la": "Asio flammeus",
+    "name_fr": "Hiboux des marais",
+    "name_en": "Short-eared owl",
+    "classification": "Aves/Strigiformes/ Strigidae/Asio/Asio_flammeus",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "24-03-2026",
+    "size": "38"
+  },
+  {
+    "file": "Aves/Strigiformes/ Strigidae/Asio/Asio_otus.html",
+    "id": "Asio_otus",
+    "name_la": "Asio otus",
+    "name_fr": "Hiboux moyen-duc",
+    "name_en": "Long-eared owl",
+    "classification": "Aves/Strigiformes/ Strigidae/Asio/Asio_otus",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "24-03-2026",
+    "size": "35"
+  }
+]

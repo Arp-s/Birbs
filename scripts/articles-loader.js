@@ -1,39 +1,152 @@
 let allArticles = [];
 let activeTags = [];
+let activeClades = new Set();
 let selectedValue;
 let searchQuery = "";
 
-// Cutting too long abstracts
+/* =========================
+   UTIL
+========================= */
+
 function cutAtLastDot(text, limit = 600) {
     if (text.length <= limit) return text;
 
     const sub = text.slice(0, limit);
-
     const lastDot = sub.lastIndexOf(".");
 
-    if (lastDot !== -1 && lastDot > 500) { 
+    if (lastDot !== -1 && lastDot > 500) {
         return text.slice(0, lastDot + 1);
     }
     return sub + "...";
 }
 
-function renderFilters() {
-    const tags = [...new Set(allArticles.flatMap(a => a.tags))];
-    const tagsContainer = document.querySelector(".tags-container");
-    tagsContainer.innerHTML = "";
+/* =========================
+   CLASSIFICATION TREE
+========================= */
 
-    // Search bar
+function buildClassificationTree(data) {
+    const tree = {};
+
+    data.forEach(birb => {
+        const parts = birb.classification.split("/").slice(1); // ignore Aves
+        const [ordre, famille, genre, espece] = parts;
+
+        if (!tree[ordre]) tree[ordre] = {};
+        if (!tree[ordre][famille]) tree[ordre][famille] = {};
+        if (!tree[ordre][famille][genre]) tree[ordre][famille][genre] = {};
+
+        tree[ordre][famille][genre][espece] = true; // leaf
+    });
+
+    return tree;
+}
+
+function renderClassificationFilter() {
+    const container = document.querySelector(".classification-filter");
+    container.innerHTML = "";
+
+    const tree = buildClassificationTree(allArticles);
+
+    Object.entries(tree).forEach(([ordre, familles]) => {
+        container.appendChild(createCladeElement(ordre, familles));
+    });
+}
+
+function createCladeElement(name, children, level = 0) {
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "clade level-" + level;
+
+    const header = document.createElement("div");
+    header.className = "clade-header";
+
+    const isLeaf = children === true;
+
+    let toggle = null;
+
+    if (!isLeaf) {
+        toggle = document.createElement("span");
+        toggle.className = "clade-toggle";
+        header.appendChild(toggle);
+    } else {
+        const spacer = document.createElement("span");
+        spacer.className = "clade-toggle";
+        header.appendChild(spacer);
+    }
+
+    const label = document.createElement("label");
+    label.className = "tag-label checkbox";
+
+    label.innerHTML = `
+        <input type="checkbox" value="${name}">
+        <span class="checkmark"></span>
+        ${name.replaceAll("_", " ")}
+    `;
+
+    const checkbox = label.querySelector("input");
+
+    checkbox.addEventListener("change", (e) => {
+        if (e.target.checked) {
+            activeClades.add(name);
+        } else {
+            activeClades.delete(name);
+        }
+        renderArticles();
+    });
+
+    header.appendChild(label);
+    wrapper.appendChild(header);
+
+    /* ===== CHILDREN ===== */
+
+    if (!isLeaf) {
+
+        const childrenContainer = document.createElement("div");
+        childrenContainer.className = "clade-children";
+
+        // règle d’ouverture
+        // level 0 = ordre → ouvert
+        // level 1 = famille → fermé
+        // level 2 = genre → fermé
+        const shouldBeOpen = level < 1;
+
+        childrenContainer.style.display = shouldBeOpen ? "block" : "none";
+        toggle.textContent = shouldBeOpen ? "▾" : "▸";
+
+        Object.entries(children).forEach(([childName, subChildren]) => {
+            childrenContainer.appendChild(
+                createCladeElement(childName, subChildren, level + 1)
+            );
+        });
+
+        toggle.addEventListener("click", () => {
+            const isHidden = childrenContainer.style.display === "none";
+            childrenContainer.style.display = isHidden ? "block" : "none";
+            toggle.textContent = isHidden ? "▾" : "▸";
+        });
+
+        wrapper.appendChild(childrenContainer);
+    }
+
+    return wrapper;
+}
+
+/* =========================
+   FILTERS (SEARCH + SORT)
+========================= */
+
+function renderFilters() {
+
     const searchInput = document.querySelector(".search-input");
     searchInput.addEventListener("input", (e) => {
         searchQuery = e.target.value.toLowerCase().trim();
         renderArticles();
     });
 
-    // Sort selector
-
     const customSelects = document.querySelectorAll(".custom-select");
 
     customSelects.forEach((customSelect) => {
+
         const selectButton = customSelect.querySelector(".select-button");
         const dropdown = customSelect.querySelector(".select-dropdown");
         const options = dropdown.querySelectorAll("li");
@@ -41,16 +154,16 @@ function renderFilters() {
 
         let focusedIndex = -1;
 
-        // Make appear and desappear the dropdown
         const toggleDropdown = (expand = null) => {
             const isOpen =
                 expand !== null ? expand : dropdown.classList.contains("hidden");
+
             dropdown.classList.toggle("hidden", !isOpen);
             selectButton.setAttribute("aria-expanded", isOpen);
 
             if (isOpen) {
-                focusedIndex = [...options].findIndex((option) =>
-                option.classList.contains("selected")
+                focusedIndex = [...options].findIndex(option =>
+                    option.classList.contains("selected")
                 );
                 focusedIndex = focusedIndex === -1 ? 0 : focusedIndex;
                 updateFocus();
@@ -62,27 +175,22 @@ function renderFilters() {
 
         const updateFocus = () => {
             options.forEach((option, index) => {
-                if (option) {
-                option.setAttribute("tabindex", index === focusedIndex ? "0" : "-1");
+                option.setAttribute(
+                    "tabindex",
+                    index === focusedIndex ? "0" : "-1"
+                );
                 if (index === focusedIndex) option.focus();
-                }
             });
         };
 
         const handleOptionSelect = (option) => {
-            options.forEach((opt) => opt.classList.remove("selected"));
+            options.forEach(opt => opt.classList.remove("selected"));
             option.classList.add("selected");
             selectedValue.textContent = option.textContent.trim();
-
-            if (option.dataset.value === "clear") {
-                selectedValue.textContent = "Sort by date";
-                options.forEach((opt) => opt.classList.remove("selected"));
-                return;
-            }
             renderArticles();
         };
 
-        options.forEach((option) => {
+        options.forEach(option => {
             option.addEventListener("click", () => {
                 handleOptionSelect(option);
                 toggleDropdown(false);
@@ -93,16 +201,6 @@ function renderFilters() {
             toggleDropdown();
         });
 
-        selectButton.addEventListener("keydown", (event) => {
-            if (event.key === "ArrowDown") {
-                event.preventDefault();
-                toggleDropdown(true);
-            } else if (event.key === "Escape") {
-                toggleDropdown(false);
-            }
-        });
-
-        // Managing keyboard inputs
         dropdown.addEventListener("keydown", (event) => {
             if (event.key === "ArrowDown") {
                 event.preventDefault();
@@ -120,95 +218,88 @@ function renderFilters() {
                 toggleDropdown(false);
             }
         });
-
-        // Close the menu if outside click
-        // document.addEventListener("click", (event) => {
-        //     const isOutsideClick = !customSelect.contains(event.target);
-
-        //     if (isOutsideClick) {
-        //         toggleDropdown(false);
-        //     }
-        // });
-    });
-    
-    // Tags filter
-    tags.forEach(tag => {
-        const label = document.createElement("label");
-        label.className = "tag-label checkbox";
-        label.innerHTML =`<input type="checkbox" value="${tag}"> <span class="checkmark"></span> ${tag}`;
-
-        label.querySelector("input").addEventListener("change", e => {
-            if (e.target.checked) activeTags.push(tag);
-            else activeTags = activeTags.filter(t => t !== tag);
-
-            renderArticles();
-        });
-
-        tagsContainer.appendChild(label);
     });
 }
 
+/* =========================
+   RENDER ARTICLES
+========================= */
+
 function renderArticles() {
+
     const wrapper = document.querySelector(".card-wrapper");
     wrapper.innerHTML = "";
 
-    let filtered = allArticles;
+    let filtered = [...allArticles];
 
-    // Tag filter
-    if (activeTags.length > 0) {
-        filtered = filtered.filter(a =>
-            activeTags.every(t => a.tags.includes(t))
-        );
-    }
-
-    // Search bar
     if (searchQuery.length > 0) {
         const words = searchQuery.split(/\s+/);
 
         filtered = filtered.filter(a => {
             const full = `
-                ${a.title}
-                ${a.abstract}
+                ${a.name_la}
+                ${a.name_fr}
+                ${a.name_en}
                 ${a.date}
-                ${a.author}
-                ${a.tags.join(" ")}
+                ${a.classification}
+                ${a.size}
             `.toLowerCase();
 
             return words.every(w => full.includes(w));
         });
     }
 
-    // Sort menu
-    console.log(selectedValue.textContent)
-    if (selectedValue.textContent === "Sort by date") {
-        filtered.sort((a, b) => new Date(b.date.split("-").reverse().join("-")) -
-                                new Date(a.date.split("-").reverse().join("-")));
-    } else if (selectedValue.textContent === "Sort alphabetically") {
-        filtered.sort((a, b) => a.title.localeCompare(b.title));
+    if (activeClades.size > 0) {
+        filtered = filtered.filter(a => {
+            const parts = a.classification.split("/").slice(1);
+            return parts.some(part => activeClades.has(part));
+        });
     }
 
-    // Cards
-    filtered.forEach(article => {
+    if (!selectedValue) {
+        selectedValue = { textContent: "Trier alphabétiquement (a-z)" };
+    }
+
+    if (selectedValue.textContent === "Trier par date (récent)") {
+        filtered.sort((a, b) =>
+            new Date(b.date.split("-").reverse().join("-")) -
+            new Date(a.date.split("-").reverse().join("-"))
+        );
+    } else if (selectedValue.textContent === "Trier par date (ancien)") {
+        filtered.sort((a, b) =>
+            new Date(a.date.split("-").reverse().join("-")) -
+            new Date(b.date.split("-").reverse().join("-"))
+        );
+    } else if (selectedValue.textContent === "Trier alphabétiquement (z-a)") {
+        filtered.sort((a, b) => b.name_la.localeCompare(a.name_la));
+    } else if (selectedValue.textContent === "Trier par taille (croissant)") {
+        filtered.sort((a, b) => a.size - b.size);
+    } else if (selectedValue.textContent === "Trier par taille (décroissant)") {
+        filtered.sort((a, b) => b.size - a.size);
+    } else {
+        filtered.sort((a, b) => a.name_la.localeCompare(b.name_la));
+    }
+
+    filtered.forEach(birb => {
+
         const card = document.createElement("a");
         card.className = "numero-card";
-        card.href = article.file;
+        card.href = birb.file;
 
-        const dateText =
-            !article.last_edit ? article.date :
-            `${article.date} ; last edit : ${article.last_edit}`;
-
-        const abstractText = cutAtLastDot(article.abstract);
+        const image =
+            birb.classification + "_" + birb.formes[0] + ".jpg";
 
         card.innerHTML = `
             <div class="card-title">
-                <h2 class="card-name">${article.title}</h2>
-                <span class="author">${article.author}</span>
+                <h2 class="card-name"><span class="i">${birb.name_la}</span></h2>
+                <h2 class="card-name">${birb.name_fr}</h2>
+                <h2 class="card-name">${birb.name_en}</h2>
             </div>
             <div class="card-line"></div>
-            <p class="card-description">${abstractText}</p>
+            <img class="card-photo" src="${image}" alt="Illustration d'un ${birb.name_fr}">
             <div class="card-meta">
-                <span class="tags">${article.tags.join(", ")}</span>
-                <span class="date">${dateText}</span>
+                <p class="card-description">${birb.classification.replaceAll("_", " ")}</p>
+                <span class="date">${birb.date}</span>
             </div>
         `;
 
@@ -216,17 +307,25 @@ function renderArticles() {
     });
 }
 
-// Load articles list
+function renderNumbers() {
+    document.querySelector(".bird-title").innerHTML =
+        "Birbs : " + allArticles.length + "/700";
+}
+
 async function loadArticles() {
     try {
-        const response = await fetch("./articles.json");
+        const response = await fetch("./birbs.json");
         allArticles = await response.json();
 
         renderFilters();
+        renderClassificationFilter();
         renderArticles();
+        renderNumbers();
+
     } catch (err) {
         console.error("Error when loading articles:", err);
-        document.querySelector(".card-wrapper").innerHTML = `<p class="card-error-message">Error when loading articles</p>`;
+        document.querySelector(".card-wrapper").innerHTML =
+            `<p class="card-error-message">Error when loading articles</p>`;
     }
 }
 
