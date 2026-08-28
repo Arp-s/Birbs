@@ -335,6 +335,35 @@
     "size": "45"
   },
   {
+    "file": "Aves/Passeriformes/Corvidae/Pyrrhocorax/Pyrrhocorax_graculus.html",
+    "id": "Pyrrhocorax_graculus",
+    "name_la": "Pyrrhocorax graculus",
+    "name_fr": "Chocard à bec jaune",
+    "name_en": "Alpine chough",
+    "classification": "Aves/Passeriformes/Corvidae/Pyrrhocorax/Pyrrhocorax_graculus",
+    "formes": [
+      "adulte",
+      "vol"
+    ],
+    "date": "01-07-2026",
+    "size": "37"
+  },
+  {
+    "file": "Aves/Passeriformes/Corvidae/Pyrrhocorax/Pyrrhocorax_pyrrhocorax.html",
+    "id": "Pyrrhocorax_pyrrhocorax",
+    "name_la": "Pyrrhocorax pyrrhocorax",
+    "name_fr": "Crave à bec rouge",
+    "name_en": "Red-billed chough",
+    "classification": "Aves/Passeriformes/Corvidae/Pyrrhocorax/Pyrrhocorax_pyrrhocorax",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "01-07-2026",
+    "size": "41"
+  },
+  {
     "file": "Aves/Passeriformes/Fringillidae/Fringilla/Fringilla_coelebs.html",
     "id": "Fringilla_coelebs",
     "name_la": "Fringilla coelebs",
@@ -356,6 +385,20 @@
     "name_fr": "Pinson du nord",
     "name_en": "Brambling",
     "classification": "Aves/Passeriformes/Fringillidae/Fringilla/Fringilla_montifringilla",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "01-01-2026",
+    "size": "15"
+  },
+  {
+    "file": "Aves/Passeriformes/Fringillidae/Pyrrhula/Pyrrhula_pyrrhula.html",
+    "id": "Pyrrhula_pyrrhula",
+    "name_la": "Pyrrhula pyrrhula",
+    "name_fr": "Bouvreuil pivoine",
+    "name_en": "Eurasian bullfinch",
+    "classification": "Aves/Passeriformes/Fringillidae/Pyrrhula/Pyrrhula_pyrrhula",
     "formes": [
       "adulte",
       "femelle"
@@ -940,6 +983,19 @@
     "size": "24"
   },
   {
+    "file": "Aves/Strigiformes/ Strigidae/Aegolius/Aegolius_funereus.html",
+    "id": "Aegolius_funereus",
+    "name_la": "Aegolius funereus",
+    "name_fr": "Chouette de Tengmalm",
+    "name_en": "Boreal owl",
+    "classification": "Aves/Strigiformes/ Strigidae/Aegolius/Aegolius_funereus",
+    "formes": [
+      "adulte"
+    ],
+    "date": "24-03-2026",
+    "size": "25"
+  },
+  {
     "file": "Aves/Strigiformes/ Strigidae/Asio/Asio_flammeus.html",
     "id": "Asio_flammeus",
     "name_la": "Asio flammeus",
@@ -948,8 +1004,7 @@
     "classification": "Aves/Strigiformes/ Strigidae/Asio/Asio_flammeus",
     "formes": [
       "adulte",
-      "vol",
-      "juvenile"
+      "vol"
     ],
     "date": "24-03-2026",
     "size": "38"
@@ -963,10 +1018,94 @@
     "classification": "Aves/Strigiformes/ Strigidae/Asio/Asio_otus",
     "formes": [
       "adulte",
-      "vol",
       "juvenile"
     ],
     "date": "24-03-2026",
     "size": "35"
+  },
+  {
+    "file": "Aves/Strigiformes/ Strigidae/Athene/Athene_noctua.html",
+    "id": "Athene_noctua",
+    "name_la": "Athene noctua",
+    "name_fr": "Chevêche d'Athéna",
+    "name_en": "Owl of Athena",
+    "classification": "Aves/Strigiformes/ Strigidae/Athene/Athene_noctua",
+    "formes": [
+      "adulte",
+      "juvenile"
+    ],
+    "date": "24-03-2026",
+    "size": "26"
+  },
+  {
+    "file": "Aves/Strigiformes/ Strigidae/Bubo/Bubo_bubo.html",
+    "id": "Bubo_bubo",
+    "name_la": "Bubo bubo",
+    "name_fr": "Hiboux grand-duc d'Europe",
+    "name_en": "Eurasian eagle-owl",
+    "classification": "Aves/Strigiformes/ Strigidae/Bubo/Bubo_bubo",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "24-03-2026",
+    "size": "70"
+  },
+  {
+    "file": "Aves/Strigiformes/ Strigidae/Glaucidium/Glaucidium_passerinum.html",
+    "id": "Glaucidium_passerinum",
+    "name_la": "Glaucidium passerinum",
+    "name_fr": "Chevêchette d'Europe",
+    "name_en": "Eurasian pygmy owl",
+    "classification": "Aves/Strigiformes/ Strigidae/Glaucidium/Glaucidium_passerinum",
+    "formes": [
+      "adulte"
+    ],
+    "date": "24-03-2026",
+    "size": "17"
+  },
+  {
+    "file": "Aves/Strigiformes/ Strigidae/Otus/Otus_scops.html",
+    "id": "Otus_scops",
+    "name_la": "Otus scops",
+    "name_fr": "Hiboux petit-duc scops",
+    "name_en": "Eurasian scops owl",
+    "classification": "Aves/Strigiformes/ Strigidae/Otus/Otus_scops",
+    "formes": [
+      "adulte"
+    ],
+    "date": "24-03-2026",
+    "size": "18"
+  },
+  {
+    "file": "Aves/Strigiformes/ Strigidae/Strix/Strix_aluco.html",
+    "id": "Strix_aluco",
+    "name_la": "Strix aluco",
+    "name_fr": "CHouette hulotte",
+    "name_en": "Tawny owl",
+    "classification": "Aves/Strigiformes/ Strigidae/Strix/Strix_aluco",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "24-03-2026",
+    "size": "40"
+  },
+  {
+    "file": "Aves/Strigiformes/ Strigidae/Tyto/Tyto_alba.html",
+    "id": "Tyto_alba",
+    "name_la": "Tyto alba",
+    "name_fr": "Effraie des clochers",
+    "name_en": "Western barn owl",
+    "classification": "Aves/Strigiformes/ Strigidae/Tyto/Tyto_alba",
+    "formes": [
+      "adulte",
+      "vol",
+      "juvenile"
+    ],
+    "date": "24-03-2026",
+    "size": "38"
   }
 ]

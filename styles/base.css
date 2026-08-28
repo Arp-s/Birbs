@@ -15,11 +15,11 @@
 
     --p-police-size: 16px;
     --source-police-size: 12px;
-    --title-police-size: 56px;
-    --subtitle-police-size: 48px;
-    --title1-police-size: 36px;
-    --title2-police-size: 28px;
-    --title3-police-size: 22px;
+    --title-police-size: 36px;
+    --subtitle-police-size: 30px;
+    --title1-police-size: 26px;
+    --title2-police-size: 24px;
+    --title3-police-size: 20px;
 }
 @media (max-width: 500px) {
     :root{

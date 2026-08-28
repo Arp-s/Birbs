@@ -45,13 +45,16 @@
                 align-items: center; 
             }
                 .photo-block .photo {
-                    max-height: 400px;
-                    height: 25vw;
+                    height: auto;
+                    max-height: 300px;
+                    width: 90vw;
+                    max-width: 200px;
+                    object-fit:scale-down;
                     margin: 0 auto;
-                    box-shadow: 0 0 10px 1px var(--second-color);
                 }
                 .conservation .photo, .repartition .photo {
-                    width: 450px;
+                    width: 95vw;
+                    max-width: 450px;
                     height: auto;
                 }
                 .photo-block {

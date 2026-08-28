@@ -257,24 +257,24 @@ function renderArticles() {
     }
 
     if (!selectedValue) {
-        selectedValue = { textContent: "Trier alphabétiquement (a-z)" };
+        selectedValue = { textContent: "Alphabétique (a-z)" };
     }
 
-    if (selectedValue.textContent === "Trier par date (récent)") {
+    if (selectedValue.textContent === "Date (récent)") {
         filtered.sort((a, b) =>
             new Date(b.date.split("-").reverse().join("-")) -
             new Date(a.date.split("-").reverse().join("-"))
         );
-    } else if (selectedValue.textContent === "Trier par date (ancien)") {
+    } else if (selectedValue.textContent === "Date (ancien)") {
         filtered.sort((a, b) =>
             new Date(a.date.split("-").reverse().join("-")) -
             new Date(b.date.split("-").reverse().join("-"))
         );
-    } else if (selectedValue.textContent === "Trier alphabétiquement (z-a)") {
+    } else if (selectedValue.textContent === "Alphabétique (z-a)") {
         filtered.sort((a, b) => b.name_la.localeCompare(a.name_la));
-    } else if (selectedValue.textContent === "Trier par taille (croissant)") {
+    } else if (selectedValue.textContent === "Taille (croissant)") {
         filtered.sort((a, b) => a.size - b.size);
-    } else if (selectedValue.textContent === "Trier par taille (décroissant)") {
+    } else if (selectedValue.textContent === "Taille (décroissant)") {
         filtered.sort((a, b) => b.size - a.size);
     } else {
         filtered.sort((a, b) => a.name_la.localeCompare(b.name_la));
