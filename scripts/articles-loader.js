@@ -309,7 +309,7 @@ function renderArticles() {
 
 function renderNumbers() {
     document.querySelector(".home-title").innerHTML =
-        "Birbs : " + allArticles.length + "/700";
+        "Birbs : " + allArticles.length + "/694";
 }
 
 async function loadArticles() {
