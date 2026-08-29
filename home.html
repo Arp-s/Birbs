@@ -41,6 +41,7 @@
         <meta name="twitter:card" content="summary_large_image">
 
         <script src="./scripts/articles-loader.js"></script>
+        <script src="./scripts/home-head-scroll.js" defer></script>
     </head>
     <body>
         <div class="home-background"></div>
@@ -48,41 +49,41 @@
         <div class="home-body">
 
             <div class="side-page">
+                <h1>Birbs</h1>
                 <div class="classification-filter"></div>
-                <button type="button" class="quizz-button"><a href="quiz.html">Quiz</a></button>
+                <a href="quiz.html"><button type="button" class="quizz-button">Quiz</button></a>
             </div>
 
             <div class="home-page">
-                <div class="head top">
+                <div class="home-head top">
                     <div class="head-flex">
                         <div class="header-textbox">
-                            <h1 class="bird-title">Birbs</h1>
+                            <h1 class="home-title">Birbs</h1>
                         </div>
                     </div>
                     <div class="line"></div>
-                </div>
-                <div class="research-container">
-                    <div class="research-query-container">
-                        <input class="search-input" type="text" placeholder=" Search..." >
-                        <div class="custom-select">
-                            <button class="select-button">
-                                <span class="selected-value">Alphabétique (a-z)</span>
-                                <span class="arrow"></span>
-                            </button>
-                            <ul class="select-dropdown hidden">
-                                <li>Taxons (wip)</li>
-                                <li>Date (récent)</li>
-                                <li>Date (ancien)</li>
-                                <li>Alphabétique (a-z)</li>
-                                <li>Alphabétique (z-a)</li>
-                                <li>Taille (croissant)</li>
-                                <li>Taille (décroissant)</li>
-                            </ul>
-                        </div>
-
-                    </div> 
-                    <!-- <div class="tags-container"></div> -->
-                    <div class="pagination"></div>
+                    <div class="research-container">
+                        <div class="research-query-container">
+                            <input class="search-input" type="text" placeholder=" Search..." >
+                            <div class="custom-select">
+                                <button class="select-button">
+                                    <span class="selected-value">Alphabétique (a-z)</span>
+                                    <span class="arrow"></span>
+                                </button>
+                                <ul class="select-dropdown hidden">
+                                    <li>Taxons (wip)</li>
+                                    <li>Date (récent)</li>
+                                    <li>Date (ancien)</li>
+                                    <li>Alphabétique (a-z)</li>
+                                    <li>Alphabétique (z-a)</li>
+                                    <li>Taille (croissant)</li>
+                                    <li>Taille (décroissant)</li>
+                                </ul>
+                            </div>
+                        </div> 
+                        <!-- <div class="tags-container"></div> -->
+                        <div class="pagination"></div>
+                    </div>
                 </div>
                 <div class="card-wrapper">
                     <!-- Auto inserted cards with javascript -->

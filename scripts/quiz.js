@@ -27,6 +27,7 @@ const optionsEl = document.getElementById("quiz-options");
 const feedbackEl = document.getElementById("quiz-feedback");
 const scoreCorrectEl = document.getElementById("score-correct");
 const scoreTotalEl = document.getElementById("score-total");
+const scoreRatio = document.getElementById("score-ratio");
 
 // ----- Bootstrap: load the bird database, then start the quiz ----- //
 
@@ -207,4 +208,5 @@ function handleAnswer(selectedBird, btnEl) {
 function updateScore() {
     scoreCorrectEl.textContent = correctCount;
     scoreTotalEl.textContent = totalCount;
+    scoreRatio.textContent = Math.floor(correctCount/totalCount*100);
 }

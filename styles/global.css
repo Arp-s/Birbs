@@ -6,11 +6,17 @@
     height: 100%;
     position: fixed;
     z-index: -1;
-    background-color: var(--second-color);
+    background-color: var(--background-color);
 }
 .infos-perso {
-    position: fixed;
-    margin: 10px;
+    position: fixed;position: sticky;
+    margin: 25px;
+    margin-bottom: 0;
+    padding: 15px;
+    background-color: var(--second-color);
+}
+.infos-perso h3 {
+    margin-top: 0;
 }
 .head-flex {
     display: flex;
@@ -21,12 +27,19 @@
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
-    padding: 25px;
+    padding: 0 25px 25px 25px;
     background: var(--background-color);
     background-size: cover;
     background-position: center;
     cursor: default;
 }
+    .head {
+        position: sticky;
+        top: 0;
+        padding-block: 15px;
+        background-color: var(--background-color);
+        box-shadow: 25px 0 0 0 var(--background-color), -25px 0 0 0 var(--background-color)
+    }
     .bird-title {
         font: var(--subtitle-police-size) var(--title-police);
         color: var(--text-color);
@@ -42,33 +55,31 @@
             .photo-block {
                 display: flex;
                 flex-direction: column;
-                align-items: center; 
+                align-items: center;
+                width: 100%;
+                margin-bottom: 25px;
             }
                 .photo-block .photo {
                     height: auto;
-                    max-height: 300px;
-                    width: 90vw;
-                    max-width: 200px;
-                    object-fit:scale-down;
-                    margin: 0 auto;
+                    width: 100%;
+                    margin-left: 5px;
+                    margin-block: 5px;
+                    box-shadow: -10px -10px 0 0 var(--second-color);  
                 }
-                .conservation .photo, .repartition .photo {
-                    width: 95vw;
-                    max-width: 450px;
-                    height: auto;
+                .conservation .photo {
+                    width: 100%; 
+                    margin-left: 0px;
+                    box-shadow: none;
                 }
-                .photo-block {
-                    margin-bottom: 15px;
-                }
-                .conservation .photo-block, .repartition .photo-block {
-                    margin: 0 calc((100% - 450px)/2);
+                .repartition .photo {
+                    margin-top: 10px;
                 }
                 .legend {
                     margin: 0 25px;
                 }
         
         .section {
-            margin: 15px 0 10px 0;
+            margin: 15px 0 5px 0;
         }   
 
         .clade{
@@ -347,19 +358,7 @@
 }
 
 @media (max-width: 850px) {
-body {
-    background: url(../assets/background.jpg);
-    background-size: 100% auto;
-    background-position: center;
-    background-attachment: fixed;
-}
-.background {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    opacity: 0.3;
-    z-index: -1;
-}
+
     .menu-center {
         width: 100%;
         margin: 30px 0;
@@ -512,9 +511,4 @@ body {
         .article-paratext {
             font-size: 12px;
         }
-}
-@media (max-width: 220px){
-body {
-    display: none;
-}
 }

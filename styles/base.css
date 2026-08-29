@@ -16,20 +16,20 @@
     --p-police-size: 16px;
     --source-police-size: 12px;
     --title-police-size: 36px;
-    --subtitle-police-size: 30px;
-    --title1-police-size: 26px;
-    --title2-police-size: 24px;
-    --title3-police-size: 20px;
+    --subtitle-police-size: 22px;
+    --title1-police-size: 20px;
+    --title2-police-size: 18px;
+    --title3-police-size: 16px;
 }
-@media (max-width: 500px) {
+@media (min-width: 500px) {
     :root{
-        --p-police-size: 14px;
-        --source-police-size: 10px;
+        --p-police-size: 16px;
+        --source-police-size: 12px;
         --title-police-size: 42px;
         --subtitle-police-size: 36px;
-        --title1-police-size: 28px;
-        --title2-police-size: 22px;
-        --title3-police-size: 18px;
+        --title1-police-size: 26px;
+        --title2-police-size: 24px;
+        --title3-police-size: 20px;
     }
 }
 
@@ -41,21 +41,21 @@
     scrollbar-color: var(--third-color) rgba(0, 0, 0, 0);
 }
 *::selection {
-    background:var(--main-color);
+    background:var(--second-color);
     color:var(--text-color);
-    border-color: var(--main-color);
+    border-color: var(--second-color);
 }
 *::-moz-selection {
-    background:var(--main-color);
+    background:var(--second-color);
     color:var(--text-color);
 }
 *::-webkit-selection {
-    background:var(--main-color);
+    background:var(--second-color);
     color:var(--text-color);
 }
 input::-moz-selection {
-    background: var(--main-color);
-    border-color: var(--main-color);
+    background: var(--second-color);
+    border-color: var(--second-color);
 }
 
 html {
@@ -78,7 +78,7 @@ u {
 }
 
 body {
-    background-color: var(--second-color);
+    background-color: var(--background-color);
     height: 100vh;
     width: 100vw;
 }

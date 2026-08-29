@@ -6,24 +6,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-style: oblique;
 }
 
-.quiz-head-flex{
+.quiz-head-flex a{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content:center;
+    align-items: center;
+    font-size: var(--subtitle-police-size);
+    font-family: var(--title-police);
 }
 
 .quiz-title {
-    font: var(--title1-police-size) var(--title-police);
-}
-
-/* Session score, shown above the quiz card */
-.quiz-score {
-    margin-bottom: 20px;
-    font: var(--title3-police-size) var(--title-police);
-    color: var(--text-color);
-    text-align: center;
+    font: var(--title-police-size) var(--title-police);
+    padding-top: 0;
 }
 
 /* Main card holding the photo, the feedback and the answer options */

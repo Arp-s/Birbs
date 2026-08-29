@@ -308,7 +308,7 @@ function renderArticles() {
 }
 
 function renderNumbers() {
-    document.querySelector(".bird-title").innerHTML =
+    document.querySelector(".home-title").innerHTML =
         "Birbs : " + allArticles.length + "/700";
 }
 

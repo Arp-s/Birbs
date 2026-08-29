@@ -211,7 +211,8 @@
     "name_en": "Long-tailed bushtit",
     "classification": "Aves/Passeriformes/Aegithalidae/Aegithalos/Aegithalos_caudatus",
     "formes": [
-      "adulte"
+      "adulte",
+      "juvenile"
     ],
     "date": "01-01-2026",
     "size": "13"
@@ -404,6 +405,48 @@
       "femelle"
     ],
     "date": "01-01-2026",
+    "size": "15"
+  },
+  {
+    "file": "Aves/Passeriformes/Motacillidae/Motacilla/Motacilla_alba.html",
+    "id": "Motacilla_alba",
+    "name_la": "Motacilla alba",
+    "name_fr": "Bergeronnette grise",
+    "name_en": "White wagtail",
+    "classification": "Aves/Passeriformes/Motacillidae/Motacilla/Motacilla_alba",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "01-01-2026",
+    "size": "17"
+  },
+  {
+    "file": "Aves/Passeriformes/Motacillidae/Motacilla/Motacilla_cinerea.html",
+    "id": "Motacilla_cinerea",
+    "name_la": "Motacilla cinerea",
+    "name_fr": "Bergeronnette des ruisseaux",
+    "name_en": "Grey wagtail",
+    "classification": "Aves/Passeriformes/Motacillidae/Motacilla/Motacilla_cinerea",
+    "formes": [
+      "adulte",
+      "nuptial"
+    ],
+    "date": "28-08-2026",
+    "size": "19"
+  },
+  {
+    "file": "Aves/Passeriformes/Motacillidae/Motacilla/Motacilla_flava.html",
+    "id": "Motacilla_flava",
+    "name_la": "Motacilla flava",
+    "name_fr": "Bergeronnette printanière",
+    "name_en": "Western yellow wagtail",
+    "classification": "Aves/Passeriformes/Motacillidae/Motacilla/Motacilla_flava",
+    "formes": [
+      "adulte",
+      "femelle"
+    ],
+    "date": "28-08-2026",
     "size": "15"
   },
   {
@@ -1082,7 +1125,7 @@
     "file": "Aves/Strigiformes/ Strigidae/Strix/Strix_aluco.html",
     "id": "Strix_aluco",
     "name_la": "Strix aluco",
-    "name_fr": "CHouette hulotte",
+    "name_fr": "Chouette hulotte",
     "name_en": "Tawny owl",
     "classification": "Aves/Strigiformes/ Strigidae/Strix/Strix_aluco",
     "formes": [

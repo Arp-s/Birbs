@@ -1,34 +1,23 @@
 .page.error {
-    padding-top: 70px;
-    height: 80%;
+    padding: 100px 25px 200px 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .body.error {
     flex-direction: column
 }
     .error-title {
         margin-top: 5dvh;
-        font-size:68px;
+        font-size: var(--title-police-size);
         color: var(--font-color);
         text-align: center;
     }
     .error-text {
         margin-top: 1dvh;
-        font-size:28px;
+        font-size: var(--subtitle-police-size);
         color: var(--font-color);
         text-align: center;
     }
 
-    .button-error {
-        width: 20%;
-        margin: 5dvh auto 0 auto;
-        padding: 12px 15px;
-        border-radius: 20px;
-        font: 16px "Alice", calibri;
-        color: rgb(255, 255, 255);
-        text-align: center;
-        background: var(--background-color);
-        transition: 0.2s;
-    }
-    .button-error:hover {
-        background: var(--main-color);
-    }
