@@ -1,24 +1,18 @@
-const button = document.querySelector(".summary-button");
-const link = document.querySelector(".summary-list");
-const thumb = document.querySelector(".thumbs");
-const out = document.querySelector(".summary-out");
-const summaryContainer = document.querySelector(".summary");
+// Controls the mobile side navigation panel (".side-page") via the
+// top-left toggle button (".side-toggle").
+// Both elements share an "open" class: CSS handles all the animation
+// (panel slide-in, button slide, chevron -> cross morph). This script
+// only flips that class on click and keeps aria attributes in sync.
 
+const sideToggle = document.getElementById("side-toggle");
+const sidePage = document.getElementById("side-page");
 
-button.addEventListener("click", e => {
-    button.classList.toggle("active");
-    summaryContainer.classList.toggle("open");
-});
-link.addEventListener("click", e => {   
-    button.classList.toggle("active");
-    summaryContainer.classList.toggle("open");
-});
-thumb.addEventListener("click", e => {
-    button.classList.toggle("active");
-    summaryContainer.classList.toggle("open");
-});
+if (sideToggle && sidePage) {
+    sideToggle.addEventListener("click", () => {
+        const isOpen = sidePage.classList.toggle("open");
+        sideToggle.classList.toggle("open", isOpen);
 
-out.addEventListener("click", e => {
-    button.classList.remove("active");
-    summaryContainer.classList.remove("open");
-});
+        sideToggle.setAttribute("aria-expanded", String(isOpen));
+        sideToggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+    });
+}

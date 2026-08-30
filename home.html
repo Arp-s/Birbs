@@ -42,13 +42,20 @@
 
         <script src="./scripts/articles-loader.js"></script>
         <script src="./scripts/home-head-scroll.js" defer></script>
+        <script src="./scripts/button.js" defer></script>
     </head>
     <body>
         <div class="home-background"></div>
 
         <div class="home-body">
 
-            <div class="side-page">
+            <!-- Toggle button for the mobile side navigation panel (hidden on desktop, where the panel is always visible) -->
+            <button type="button" class="side-toggle" id="side-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+            </button>
+
+            <div class="side-page" id="side-page">
                 <h1>Birbs</h1>
                 <div class="classification-filter"></div>
                 <a href="quiz.html"><button type="button" class="quizz-button">Quiz</button></a>

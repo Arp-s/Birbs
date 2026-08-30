@@ -2,13 +2,17 @@
 .quiz-container {
     max-width: 700px;
     width: 100%;
-    margin: 50px auto 0 auto;
+    margin-inline: auto;
+    margin-block: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-style: oblique;
 }
 
+.quiz-head-flex {
+    padding-block: 15px;
+}
 .quiz-head-flex a{
     display: flex;
     flex-wrap: wrap;
@@ -46,6 +50,7 @@
     .quiz-image {
         max-height: 350px;
         max-width: 100%;
+        margin-left: 7.5px;
         box-shadow: -15px -15px 0 0 var(--second-color); 
     }
 
@@ -83,7 +88,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2px;
-    padding: 12px 10px;
+    padding: 10px;
     border-radius: 0;
     cursor: pointer;
     text-align: center;
